@@ -14,9 +14,9 @@ Aplicacion para Todo En Uno
   Se debe guardat monto total (sacando cigarrillos), monto total cigarillos, cant de cigarrillos(paquetes)
   Opcion de editar /borrar
   Se debe mostrar en pantalla las siguientes tres cosas
-    1) Sumatoria total de producto (al guardarse se guardan separados)
+    1)Sumatoria total de producto (al guardarse se guardan separados)
     2)Debito = A los pucho se le suma un 10%
-    3) Credito = A todo se le suma un 15%
+    3)Credito = A todo se le suma un 15%
 
 /---------------------------------------------------------------------------------------------------------------/
 *Venta propia 
@@ -41,7 +41,7 @@ Aplicacion para Todo En Uno
   /--------------------------------------------------------------------------------------/
   *Lista de producto
     Filtro por cod de barra y nombre
-    Opcion de modificar, eliminar, agregar
+    Opcion de modificar, eliminar, agregar (valor = caja / cant)
     Datos del producto:nombre, valor, stock, cod de barra, stock min
   /----------------------------------------------------------------------/
   *Cierre del mes
