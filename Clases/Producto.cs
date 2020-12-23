@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LiteDB;
+using Todo_en_uno.Helpers;
 
 namespace Todo_en_uno.Clases
 {
@@ -16,5 +18,14 @@ namespace Todo_en_uno.Clases
         public int StockMinimo { get; set; }
         public string Codigo { get; set; }
         public Boolean EsCigarrillo { get; set; }
+
+        public static List<Producto> GetProductos()
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var productos = db.GetCollection<Producto>("productos");
+                return productos.Query().ToList();
+            }
+        }
     }
 }

@@ -34,12 +34,12 @@ namespace Todo_en_uno.Forms
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.CodigoProducto = new System.Windows.Forms.Label();
             this.NombreProducto = new System.Windows.Forms.Label();
             this.CheckStock = new System.Windows.Forms.CheckBox();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.CodigoProducto = new System.Windows.Forms.Label();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -107,6 +107,7 @@ namespace Todo_en_uno.Forms
             this.BtnEliminar.TabIndex = 2;
             this.BtnEliminar.Text = "Eliminar Producto";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnEditar
             // 
@@ -118,6 +119,7 @@ namespace Todo_en_uno.Forms
             this.BtnEditar.TabIndex = 1;
             this.BtnEditar.Text = "Editar Producto";
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnAgregar
             // 
@@ -129,6 +131,25 @@ namespace Todo_en_uno.Forms
             this.BtnAgregar.TabIndex = 0;
             this.BtnAgregar.Text = "Agregar Producto";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Location = new System.Drawing.Point(272, 19);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(116, 42);
+            this.BtnBuscar.TabIndex = 5;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.AutoSize = true;
+            this.CodigoProducto.Location = new System.Drawing.Point(136, 15);
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.Size = new System.Drawing.Size(100, 13);
+            this.CodigoProducto.TabIndex = 4;
+            this.CodigoProducto.Text = "Codigo de producto";
             // 
             // NombreProducto
             // 
@@ -163,24 +184,6 @@ namespace Todo_en_uno.Forms
             this.TxtNombre.Size = new System.Drawing.Size(100, 20);
             this.TxtNombre.TabIndex = 0;
             // 
-            // CodigoProducto
-            // 
-            this.CodigoProducto.AutoSize = true;
-            this.CodigoProducto.Location = new System.Drawing.Point(136, 15);
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.Size = new System.Drawing.Size(100, 13);
-            this.CodigoProducto.TabIndex = 4;
-            this.CodigoProducto.Text = "Codigo de producto";
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Location = new System.Drawing.Point(272, 19);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(116, 42);
-            this.BtnBuscar.TabIndex = 5;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -190,6 +193,7 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 360);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -200,6 +204,8 @@ namespace Todo_en_uno.Forms
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Inventario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Inventario_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
