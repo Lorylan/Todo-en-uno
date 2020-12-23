@@ -17,7 +17,7 @@ namespace Todo_en_uno.Clases
 
         public void cargarVenta()
         {
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDatos))
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
                 var preferencia = preferencias.Query().ToList().First();
@@ -31,9 +31,10 @@ namespace Todo_en_uno.Clases
                 ventas.Insert(venta);
             }
         }
-        public double calcularCredito() {
+        public double calcularCredito()
+        {
             Preferencia preferencia_aux;
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDatos))
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
                 preferencia_aux = preferencias.Query().ToList().First();
@@ -43,7 +44,7 @@ namespace Todo_en_uno.Clases
         public double calcularDebito()
         {
             Preferencia preferencia_aux;
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDatos))
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
                 preferencia_aux = preferencias.Query().ToList().First();
@@ -55,9 +56,9 @@ namespace Todo_en_uno.Clases
             double gananciaCigarrillo;
             PrecioTotal = 0;
             CantCigarrillos = 0;
-            PrecioTotalCigarrillo=0;
+            PrecioTotalCigarrillo = 0;
             List<Orden> ordenes;
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDatos))
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
                 var preferencia_aux = preferencias.Query().ToList().First();

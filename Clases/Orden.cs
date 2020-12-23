@@ -19,8 +19,9 @@ namespace Todo_en_uno.Clases
         public int cantProducto { get; set; }
 
 
-        public void cargarOrden(double? precioEntrada, string codigo, int cantProducto, bool esVentaPropia) { 
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDatos))
+        public void cargarOrden(double? precioEntrada, string codigo, int cantProducto, bool esVentaPropia)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ordenes = db.GetCollection<Orden>("ordenes");
                 var productos = db.GetCollection<Producto>("productos");
@@ -69,15 +70,17 @@ namespace Todo_en_uno.Clases
                 }
             }
         }
-        public void eliminarOrden() {
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDatos))
+        public void eliminarOrden()
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ordenes = db.GetCollection<Orden>("ordenes");
                 ordenes.DeleteAll();
             }
         }
-        public List<Orden> getAll() {
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDatos))
+        public List<Orden> getAll()
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ordenes = db.GetCollection<Orden>("ordenes");
                 return ordenes.Query().ToList();

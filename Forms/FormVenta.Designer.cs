@@ -43,10 +43,15 @@
             this.txt_total_credito = new System.Windows.Forms.Label();
             this.btn_nueva_venta = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+<<<<<<< HEAD:Forms/FormVenta.Designer.cs
             this.precio = new System.Windows.Forms.Label();
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datos_venta)).BeginInit();
+=======
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+>>>>>>> 14a7882ff01cb5cf9635e8642bd986a74a353c44:Forms/Venta.Designer.cs
             this.SuspendLayout();
             // 
             // Titulo
@@ -168,6 +173,7 @@
             // 
             // btn_nueva_venta
             // 
+<<<<<<< HEAD:Forms/FormVenta.Designer.cs
             this.btn_nueva_venta.Location = new System.Drawing.Point(127, 599);
             this.btn_nueva_venta.Name = "btn_nueva_venta";
             this.btn_nueva_venta.Size = new System.Drawing.Size(544, 40);
@@ -175,12 +181,21 @@
             this.btn_nueva_venta.Text = "Fin de venta";
             this.btn_nueva_venta.UseVisualStyleBackColor = true;
             this.btn_nueva_venta.Click += new System.EventHandler(this.btn_nueva_venta_Click);
+=======
+            this.btn_nueva_venta.Location = new System.Drawing.Point(127, 470);
+            this.btn_nueva_venta.Name = "btn_nueva_venta";
+            this.btn_nueva_venta.Size = new System.Drawing.Size(544, 40);
+            this.btn_nueva_venta.TabIndex = 12;
+            this.btn_nueva_venta.Text = "Fin de Venta";
+            this.btn_nueva_venta.UseVisualStyleBackColor = true;
+>>>>>>> 14a7882ff01cb5cf9635e8642bd986a74a353c44:Forms/Venta.Designer.cs
             // 
             // timer1
             // 
             this.timer1.Interval = 250;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+<<<<<<< HEAD:Forms/FormVenta.Designer.cs
             // precio
             // 
             this.precio.AutoSize = true;
@@ -209,13 +224,28 @@
             this.btn_eliminar.UseVisualStyleBackColor = true;
             // 
             // FormVenta
+=======
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Location = new System.Drawing.Point(64, 52);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(163, 44);
+            this.btn_eliminar.TabIndex = 13;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            // 
+            // Venta
+>>>>>>> 14a7882ff01cb5cf9635e8642bd986a74a353c44:Forms/Venta.Designer.cs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 651);
             this.Controls.Add(this.btn_eliminar);
+<<<<<<< HEAD:Forms/FormVenta.Designer.cs
             this.Controls.Add(this.precio);
             this.Controls.Add(this.txt_precio);
+=======
+>>>>>>> 14a7882ff01cb5cf9635e8642bd986a74a353c44:Forms/Venta.Designer.cs
             this.Controls.Add(this.btn_nueva_venta);
             this.Controls.Add(this.txt_total_credito);
             this.Controls.Add(this.txt_total_debito);
@@ -253,8 +283,11 @@
         private System.Windows.Forms.Label txt_total_credito;
         private System.Windows.Forms.Button btn_nueva_venta;
         private System.Windows.Forms.Timer timer1;
+<<<<<<< HEAD:Forms/FormVenta.Designer.cs
         private System.Windows.Forms.Label precio;
         private System.Windows.Forms.TextBox txt_precio;
+=======
+>>>>>>> 14a7882ff01cb5cf9635e8642bd986a74a353c44:Forms/Venta.Designer.cs
         private System.Windows.Forms.Button btn_eliminar;
     }
 }
