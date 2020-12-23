@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Orden.cs" />
     <Compile Include="Clases\Preferencia.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Forms\AgregarProducto.cs">
@@ -111,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Db\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
