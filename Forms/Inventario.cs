@@ -78,5 +78,18 @@ namespace Todo_en_uno.Forms
             }
             Refrescar();
         }
+
+        private void Filtrar(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = Producto.GetProductosFiltrados(TxtNombre.Text, TxtCodigo.Text, CheckStock.Checked);
+        }
+
+        private void BtnFiltrar_Click(object sender, EventArgs e)
+        {
+            TxtNombre.Text = "";
+            TxtCodigo.Text = "";
+            CheckStock.Checked = false;
+            Filtrar(sender, e);
+        }
     }
 }

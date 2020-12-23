@@ -34,13 +34,14 @@ namespace Todo_en_uno.Forms
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnFiltrar = new System.Windows.Forms.Button();
             this.CodigoProducto = new System.Windows.Forms.Label();
             this.NombreProducto = new System.Windows.Forms.Label();
             this.CheckStock = new System.Windows.Forms.CheckBox();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_sim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,7 +69,7 @@ namespace Todo_en_uno.Forms
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
+            this.splitContainer1.Size = new System.Drawing.Size(990, 449);
             this.splitContainer1.SplitterDistance = 86;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -87,14 +88,15 @@ namespace Todo_en_uno.Forms
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.BtnBuscar);
+            this.splitContainer2.Panel2.Controls.Add(this.btn_sim);
+            this.splitContainer2.Panel2.Controls.Add(this.BtnFiltrar);
             this.splitContainer2.Panel2.Controls.Add(this.CodigoProducto);
             this.splitContainer2.Panel2.Controls.Add(this.NombreProducto);
             this.splitContainer2.Panel2.Controls.Add(this.CheckStock);
             this.splitContainer2.Panel2.Controls.Add(this.TxtCodigo);
             this.splitContainer2.Panel2.Controls.Add(this.TxtNombre);
-            this.splitContainer2.Size = new System.Drawing.Size(800, 86);
-            this.splitContainer2.SplitterDistance = 396;
+            this.splitContainer2.Size = new System.Drawing.Size(990, 86);
+            this.splitContainer2.SplitterDistance = 490;
             this.splitContainer2.TabIndex = 0;
             // 
             // BtnEliminar
@@ -133,14 +135,15 @@ namespace Todo_en_uno.Forms
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // BtnBuscar
+            // BtnFiltrar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(272, 19);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(116, 42);
-            this.BtnBuscar.TabIndex = 5;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnFiltrar.Location = new System.Drawing.Point(252, 21);
+            this.BtnFiltrar.Name = "BtnFiltrar";
+            this.BtnFiltrar.Size = new System.Drawing.Size(86, 30);
+            this.BtnFiltrar.TabIndex = 5;
+            this.BtnFiltrar.Text = "Limpiar Filtros";
+            this.BtnFiltrar.UseVisualStyleBackColor = true;
+            this.BtnFiltrar.Click += new System.EventHandler(this.BtnFiltrar_Click);
             // 
             // CodigoProducto
             // 
@@ -169,6 +172,7 @@ namespace Todo_en_uno.Forms
             this.CheckStock.TabIndex = 2;
             this.CheckStock.Text = "Poco Stock";
             this.CheckStock.UseVisualStyleBackColor = true;
+            this.CheckStock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Filtrar);
             // 
             // TxtCodigo
             // 
@@ -176,6 +180,7 @@ namespace Todo_en_uno.Forms
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(100, 20);
             this.TxtCodigo.TabIndex = 1;
+            this.TxtCodigo.TextChanged += new System.EventHandler(this.Filtrar);
             // 
             // TxtNombre
             // 
@@ -183,6 +188,7 @@ namespace Todo_en_uno.Forms
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(100, 20);
             this.TxtNombre.TabIndex = 0;
+            this.TxtNombre.TextChanged += new System.EventHandler(this.Filtrar);
             // 
             // dataGridView1
             // 
@@ -194,14 +200,23 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 360);
+            this.dataGridView1.Size = new System.Drawing.Size(990, 359);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // btn_sim
+            // 
+            this.btn_sim.Location = new System.Drawing.Point(368, 17);
+            this.btn_sim.Name = "btn_sim";
+            this.btn_sim.Size = new System.Drawing.Size(99, 38);
+            this.btn_sim.TabIndex = 6;
+            this.btn_sim.Text = "Simulacro";
+            this.btn_sim.UseVisualStyleBackColor = true;
             // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(990, 449);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,8 +246,9 @@ namespace Todo_en_uno.Forms
         private System.Windows.Forms.CheckBox CheckStock;
         private System.Windows.Forms.TextBox TxtCodigo;
         private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.Button BtnFiltrar;
         private System.Windows.Forms.Label CodigoProducto;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_sim;
     }
 }

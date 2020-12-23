@@ -27,5 +27,19 @@ namespace Todo_en_uno.Clases
                 return productos.Query().ToList();
             }
         }
+
+        public static List<Producto> GetProductosFiltrados(string nombre, string codigo, bool stock_min)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var productos = db.GetCollection<Producto>("productos");
+                var resul = productos.Query().Where(x => x.Codigo.Contains(codigo) && x.Nombre.Contains(nombre)).ToList();
+                if (stock_min)
+                {
+                    resul = resul.Where(x => x.StockActual < x.StockMinimo).ToList();
+                }
+                return resul;
+            }
+        }
     }
 }
