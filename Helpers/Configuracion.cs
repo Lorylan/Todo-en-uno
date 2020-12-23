@@ -5,16 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Todo_en_uno.Helpers
-{
-    class Configuracion
-    {
-        public static String rutaBaseDeDatos
+namespace Todo_en_uno.Helpers{
+    public class Configuracion
+    {   
+        public static String rutaBaseDatos
         {
-            get
-            {
+            get {
                 string rutaProyecto = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
-                return rutaProyecto + "\\Db\\TodoEnUnoDb.db";
+                return rutaProyecto +"\\Db\\TodoEnUnoDb.db";
             }
         }
     }
