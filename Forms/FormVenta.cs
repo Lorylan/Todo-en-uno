@@ -36,7 +36,6 @@ namespace Todo_en_uno.Forms
             InitializeComponent();
             orden = new Orden();
             venta = new Venta();
-            btn_editar.Enabled = false;
             btn_eliminar.Enabled = false;
             if (orden.getAll().Count != 0) {
                 actualizarTablaPrecio();
@@ -80,9 +79,5 @@ namespace Todo_en_uno.Forms
             
         }
 
-        private void Selecciona(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
     }
 }
