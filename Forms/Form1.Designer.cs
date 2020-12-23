@@ -1,7 +1,10 @@
-﻿namespace Todo_en_uno
+﻿using System;
+
+namespace Todo_en_uno
 {
     partial class Form1
     {
+        
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
