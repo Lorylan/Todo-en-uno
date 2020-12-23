@@ -34,6 +34,7 @@ namespace Todo_en_uno.Forms
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
+            this.btn_sim = new System.Windows.Forms.Button();
             this.BtnFiltrar = new System.Windows.Forms.Button();
             this.CodigoProducto = new System.Windows.Forms.Label();
             this.NombreProducto = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@ namespace Todo_en_uno.Forms
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_sim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -135,6 +135,16 @@ namespace Todo_en_uno.Forms
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
+            // btn_sim
+            // 
+            this.btn_sim.Location = new System.Drawing.Point(368, 17);
+            this.btn_sim.Name = "btn_sim";
+            this.btn_sim.Size = new System.Drawing.Size(99, 38);
+            this.btn_sim.TabIndex = 6;
+            this.btn_sim.Text = "Simulacro";
+            this.btn_sim.UseVisualStyleBackColor = true;
+            this.btn_sim.Click += new System.EventHandler(this.btn_sim_Click);
+            // 
             // BtnFiltrar
             // 
             this.BtnFiltrar.Location = new System.Drawing.Point(252, 21);
@@ -202,15 +212,6 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(990, 359);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btn_sim
-            // 
-            this.btn_sim.Location = new System.Drawing.Point(368, 17);
-            this.btn_sim.Name = "btn_sim";
-            this.btn_sim.Size = new System.Drawing.Size(99, 38);
-            this.btn_sim.TabIndex = 6;
-            this.btn_sim.Text = "Simulacro";
-            this.btn_sim.UseVisualStyleBackColor = true;
             // 
             // Inventario
             // 

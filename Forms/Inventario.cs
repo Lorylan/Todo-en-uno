@@ -91,5 +91,11 @@ namespace Todo_en_uno.Forms
             CheckStock.Checked = false;
             Filtrar(sender, e);
         }
+
+        private void btn_sim_Click(object sender, EventArgs e)
+        {
+            Simulacro sim = new Simulacro();
+            sim.ShowDialog();
+        }
     }
 }

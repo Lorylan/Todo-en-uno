@@ -48,7 +48,7 @@ namespace Todo_en_uno.Forms
                     p.Codigo = TxtCodigo.Text;
                     if(!(TxtPCaja.Text.Trim().Equals("") && TxtUnidades.Text.Trim().Equals("")))
                     {
-                       p.PrecioBase = double.Parse(TxtPCaja.Text) / double.Parse(TxtUnidades.Text);
+                       p.PrecioBase = Math.Round(double.Parse(TxtPCaja.Text) / double.Parse(TxtUnidades.Text), 2, MidpointRounding.AwayFromZero);
                     }    
                     p.PrecioVenta = double.Parse(TxtPVenta.Text);
                     p.StockActual = int.Parse(TxtStock.Text);
