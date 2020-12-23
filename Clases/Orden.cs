@@ -28,8 +28,8 @@ namespace Todo_en_uno.Clases
                 var producto_aux = productos.Query()
                 .Where(x => x.Codigo.Equals(codigo))
                 .ToList().First();
-               
-                if (precioEntrada == null )
+
+                if (precioEntrada == null)
                 {
                     if (esVentaPropia)
                     {
