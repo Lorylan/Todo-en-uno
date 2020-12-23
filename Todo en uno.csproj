@@ -78,7 +78,14 @@
     <Compile Include="Forms\Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Simulacro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Simulacro.Designer.cs">
+      <DependentUpon>Simulacro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\Configuracion.cs" />
+    <Compile Include="Helpers\Producto_Sim.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AgregarProducto.resx">
@@ -93,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Simulacro.resx">
+      <DependentUpon>Simulacro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
