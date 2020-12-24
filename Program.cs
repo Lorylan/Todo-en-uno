@@ -17,7 +17,7 @@ namespace Todo_en_uno
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormVenta());
+            Application.Run(new Inventario());
         }
     }
 }

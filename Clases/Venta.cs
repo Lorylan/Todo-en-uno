@@ -22,46 +22,92 @@ namespace Todo_en_uno.Clases
                 return ventas.Query().ToList();
             }
         }
-        
-        public void cargarVenta()
+        public void actualizarStock()
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
-                var preferencias = db.GetCollection<Preferencia>("preferencias");
-                var preferencia = preferencias.Query().ToList().First();
+                var list_ordenes = db.GetCollection<Orden>("ordenes");
+                var productos = db.GetCollection<Producto>("productos");
+                List<Orden> ordenes = list_ordenes.Query().ToList();
+                foreach (Orden orden in ordenes) {
+                    var producto = productos.Find(x => x.Codigo == orden.codigo).FirstOrDefault();
+                    if (producto.StockActual - orden.cantProducto < 0)
+                    {
+                        producto.StockActual = 0;
+                    }
+                    else {
+                        producto.StockActual = producto.StockActual - orden.cantProducto;
+                    }
+                    productos.Update(producto);
+                }
+            }
+        }
+        public void cargarVenta(bool esVentaPropia)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
                 var ventas = db.GetCollection<Venta>("ventas");
-                var venta = new Venta
+                if (esVentaPropia)
                 {
-                    PrecioTotal = this.PrecioTotal*(preferencia.Ganancia/100),
-                    PrecioTotalCigarrillo = CantCigarrillos*preferencia.GananciaCigarrillo,
-                    CantCigarrillos = this.CantCigarrillos
-                };
-                ventas.Insert(venta);
+                    var venta = new Venta
+                    {
+                        PrecioTotal = this.PrecioTotal,
+                        PrecioTotalCigarrillo = this.PrecioTotalCigarrillo ,
+                        CantCigarrillos = this.CantCigarrillos
+                    };
+                    ventas.Insert(venta);
+                }
+                else {
+                    var preferencias = db.GetCollection<Preferencia>("preferencias");
+                    var preferencia = preferencias.Query().ToList().First();
+                   
+                    var venta = new Venta
+                    {
+                        PrecioTotal = this.PrecioTotal * (preferencia.Ganancia / 100),
+                        PrecioTotalCigarrillo = this.PrecioTotalCigarrillo +(CantCigarrillos * preferencia.GananciaCigarrillo),
+                        CantCigarrillos = this.CantCigarrillos
+                    };
+                    ventas.Insert(venta);
+                }
+                
                
             }
         }
-        public double calcularCredito()
+        public double calcularCredito(bool esVentaPropia)
         {
-            Preferencia preferencia_aux;
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
-            {
-                var preferencias = db.GetCollection<Preferencia>("preferencias");
-                preferencia_aux = preferencias.Query().ToList().First();
+            if (esVentaPropia) {
+                return 0;
             }
-            double total  =(PrecioTotal + PrecioTotalCigarrillo) * (1+(preferencia_aux.GananciaCredito / 100));
-            return total;
+            else{
+                Preferencia preferencia_aux;
+                using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+                {
+                    var preferencias = db.GetCollection<Preferencia>("preferencias");
+                    preferencia_aux = preferencias.Query().ToList().First();
+                }
+                double total = (PrecioTotal + PrecioTotalCigarrillo) * (1 + (preferencia_aux.GananciaCredito / 100));
+                return total;
+            }
+            
         }
-        public double calcularDebito()
+        public double calcularDebito(bool esVentaPropia)
         {
-            Preferencia preferencia_aux;
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            if (esVentaPropia)
             {
-                var preferencias = db.GetCollection<Preferencia>("preferencias");
-                preferencia_aux = preferencias.Query().ToList().First();
+                return 0;
             }
-            double porcentaje = 1 + (preferencia_aux.GananciaDebito / 100);
-            double total = (PrecioTotal + (PrecioTotalCigarrillo * porcentaje));
-            return total;
+            else {
+                Preferencia preferencia_aux;
+                using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+                {
+                    var preferencias = db.GetCollection<Preferencia>("preferencias");
+                    preferencia_aux = preferencias.Query().ToList().First();
+                }
+                double porcentaje = 1 + (preferencia_aux.GananciaDebito / 100);
+                double total = (PrecioTotal + (PrecioTotalCigarrillo * porcentaje));
+                return total;
+            }
+            
         }
         public void calcularPrecio() {
             double ganancia;

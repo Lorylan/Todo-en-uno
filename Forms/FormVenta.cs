@@ -19,7 +19,7 @@ namespace Todo_en_uno.Forms
         bool primeraOrden = true;
         Orden orden;
         Venta venta;
-        
+        bool esVentaPropia;
         private void vaciarTxtArriba() {
             txt_codigo.Text = "";
             txt_cant.Text = "1";
@@ -28,9 +28,9 @@ namespace Todo_en_uno.Forms
         private void actualizarTablaPrecio() {
             venta.calcularPrecio();
             txt_total.Text = "$" + venta.PrecioTotal.ToString();
-            txt_total_credito.Text = "$" + venta.calcularCredito().ToString();
-            txt_total_debito.Text = "$" + venta.calcularDebito().ToString();
-            datos_venta.DataSource = orden.getAll();
+            txt_total_credito.Text = "$" + venta.calcularCredito(esVentaPropia).ToString();
+            txt_total_debito.Text = "$" + venta.calcularDebito(esVentaPropia).ToString();
+            datos_venta.DataSource = orden.getAll(esVentaPropia);
             
         }
         public void agregarBotones() {
@@ -52,13 +52,14 @@ namespace Todo_en_uno.Forms
         }
         //.......................................................................//
 
-        public FormVenta()
+        public FormVenta(bool ventaPropia)
         {
             InitializeComponent();
+            esVentaPropia = ventaPropia;
             orden = new Orden();
             venta = new Venta();
             btn_eliminar.Enabled = false;
-            if (orden.getAll().Count != 0)
+            if (orden.getAll(esVentaPropia).Count != 0)
             {
                 actualizarTablaPrecio();
                 agregarBotones();
@@ -66,6 +67,9 @@ namespace Todo_en_uno.Forms
             }
             
         }
+
+        
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -75,7 +79,7 @@ namespace Todo_en_uno.Forms
                 if (cant > 0) {
                     if (txt_precio.Text.Trim().Equals(""))
                     {
-                        if (!orden.cargarOrden(txt_codigo.Text, cant, false)) {
+                        if (!orden.cargarOrden(txt_codigo.Text, cant, esVentaPropia)) {
                             MessageBox.Show("EL codigo del producto no es valido");
                         };
                     }
@@ -84,7 +88,7 @@ namespace Todo_en_uno.Forms
                         try
                         {
                             double precio = Convert.ToDouble(txt_precio.Text);
-                            if (!orden.cargarOrdenConPrecio(precio, txt_codigo.Text, false)) {
+                            if (!orden.cargarOrdenConPrecio(precio, txt_codigo.Text, esVentaPropia)) {
                                 MessageBox.Show("EL codigo del producto no es valido");
                             }
                         }
@@ -128,9 +132,11 @@ namespace Todo_en_uno.Forms
 
         private void btn_nueva_venta_Click(object sender, EventArgs e)
         {
-            if (orden.getAll().Count != 0)
+            if (orden.getAll(esVentaPropia).Count != 0)
             {
-                venta.cargarVenta();
+
+                venta.cargarVenta(esVentaPropia);
+                venta.actualizarStock();
                 orden.eliminarOrden();
                 actualizarTablaPrecio();
                 orden = new Orden();
@@ -177,7 +183,7 @@ namespace Todo_en_uno.Forms
             if (result == DialogResult.Yes)
             {
                 orden.elimanar(id);
-                datos_venta.DataSource = orden.getAll();
+                datos_venta.DataSource = orden.getAll(esVentaPropia);
                 btn_eliminar.Enabled = false;
                 actualizarTablaPrecio();
             }
