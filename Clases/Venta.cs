@@ -81,8 +81,6 @@ namespace Todo_en_uno.Clases
                     if (orden.cantProducto != 0) {
                         PrecioTotal += (orden.precio * orden.cantProducto)-orden.precio;
                     }
-                    
-                    
                 }
             }
         }

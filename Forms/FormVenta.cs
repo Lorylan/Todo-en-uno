@@ -68,23 +68,49 @@ namespace Todo_en_uno.Forms
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
             timer1.Stop();
+            try
+            {
+                int cant = Convert.ToInt32(txt_cant.Text);
+                if (cant > 0) {
+                    if (txt_precio.Text.Trim().Equals(""))
+                    {
+                        orden.cargarOrden(txt_codigo.Text, cant, false);
+                    }
+                    else
+                    {
+                        try
+                        {
+                            double precio = Convert.ToDouble(txt_precio.Text);
+                            orden.cargarOrdenConPrecio(precio, txt_codigo.Text, false);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Ingrese un precio valido");
+                            vaciarTxtArriba();
+                        }
 
-            if (txt_precio.Text.Trim().Equals(""))
-            {
-                orden.cargarOrden(txt_codigo.Text, Convert.ToInt32(txt_cant.Text), false);
+                    }
+                    actualizarTablaPrecio();
+                    vaciarTxtArriba();
+                    if (primeraOrden)
+                    {
+                        primeraOrden = false;
+                        agregarBotones();
+                    }
+                }
+                else{
+                    MessageBox.Show("La cantidad debe ser mayor que 0");
+                    vaciarTxtArriba();
+                }
+                
             }
-            else {
-                orden.cargarOrdenConPrecio(Convert.ToDouble(txt_precio.Text), txt_codigo.Text, false);
+            catch {
+                MessageBox.Show("Ingrese un número valido en cantidad");
+                vaciarTxtArriba();
             }
-            actualizarTablaPrecio();
-            vaciarTxtArriba();
-            if (primeraOrden)
-            {
-                primeraOrden = false;
-                agregarBotones();
-            }
+            
+            
 
         }
         private void txt_codigo_TextChanged(object sender, EventArgs e)
@@ -120,7 +146,7 @@ namespace Todo_en_uno.Forms
                 var cant = Convert.ToInt32(datos.Cells["cantProducto"].Value.ToString());
                 int id = Convert.ToInt32(datos.Cells["Id"].Value.ToString());
                 string codigo = orden.FindId(id).codigo.ToString();
-                if ((e.ColumnIndex == 0) && (cant > 0))
+                if ((e.ColumnIndex == 0) && (cant > 1))
                 {
                     cant--;
                 }
@@ -130,7 +156,6 @@ namespace Todo_en_uno.Forms
                 }
                 orden.actualualizar(id, cant);
                 actualizarTablaPrecio();
-
             }
             catch { 
                 
