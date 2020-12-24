@@ -75,14 +75,18 @@ namespace Todo_en_uno.Forms
                 if (cant > 0) {
                     if (txt_precio.Text.Trim().Equals(""))
                     {
-                        orden.cargarOrden(txt_codigo.Text, cant, false);
+                        if (!orden.cargarOrden(txt_codigo.Text, cant, false)) {
+                            MessageBox.Show("EL codigo del producto no es valido");
+                        };
                     }
                     else
                     {
                         try
                         {
                             double precio = Convert.ToDouble(txt_precio.Text);
-                            orden.cargarOrdenConPrecio(precio, txt_codigo.Text, false);
+                            if (!orden.cargarOrdenConPrecio(precio, txt_codigo.Text, false)) {
+                                MessageBox.Show("EL codigo del producto no es valido");
+                            }
                         }
                         catch
                         {

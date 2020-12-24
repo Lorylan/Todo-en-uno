@@ -19,7 +19,7 @@ namespace Todo_en_uno.Clases
         public int cantProducto { get; set; }
 
 
-        public void cargarOrden(string codigo, int cantProducto, bool esVentaPropia)
+        public bool  cargarOrden(string codigo, int cantProducto, bool esVentaPropia)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
@@ -34,35 +34,43 @@ namespace Todo_en_uno.Clases
                     
                     var productos = db.GetCollection<Producto>("productos");
                     var producto = productos.Find(x => x.Codigo == codigo).FirstOrDefault();
-                    if (esVentaPropia)
+                    if (producto != null)
                     {
-                        var orden = new Orden
+                        if (esVentaPropia)
                         {
-                            codigo = producto.Codigo,
-                            esCigarrillo = producto.EsCigarrillo,
-                            nombreProducto = producto.Nombre,
-                            precio = producto.PrecioBase,
-                            cantProducto = cantProducto
-                        };
-                        ordenes.Insert(orden);
-                    }
-                    else
-                    {
-                        var orden = new Orden
+                            var orden = new Orden
+                            {
+                                codigo = producto.Codigo,
+                                esCigarrillo = producto.EsCigarrillo,
+                                nombreProducto = producto.Nombre,
+                                precio = producto.PrecioBase,
+                                cantProducto = cantProducto
+                            };
+                            ordenes.Insert(orden);
+                        }
+                        else
                         {
-                            codigo = producto.Codigo,
-                            esCigarrillo = producto.EsCigarrillo,
-                            nombreProducto = producto.Nombre,
-                            precio = producto.PrecioVenta,
-                            cantProducto = cantProducto
-                        };
-                        ordenes.Insert(orden);
+                            var orden = new Orden
+                            {
+                                codigo = producto.Codigo,
+                                esCigarrillo = producto.EsCigarrillo,
+                                nombreProducto = producto.Nombre,
+                                precio = producto.PrecioVenta,
+                                cantProducto = cantProducto
+                            };
+                            ordenes.Insert(orden);
+                        }
+                        
                     }
+                    else {
+                        return false;
+                    }
+                    
                 }
-                
+                return true;
             }
         }
-        public void cargarOrdenConPrecio(double precioEntrada, string codigo, bool esVentaPropia)
+        public bool cargarOrdenConPrecio(double precioEntrada, string codigo, bool esVentaPropia)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
@@ -76,16 +84,23 @@ namespace Todo_en_uno.Clases
                 else {
                     var productos = db.GetCollection<Producto>("productos");
                     var producto = productos.Find(x => x.Codigo == codigo).FirstOrDefault();
-                    var orden = new Orden
+                    if (producto != null)
                     {
-                        codigo = producto.Codigo,
-                        esCigarrillo = producto.EsCigarrillo,
-                        nombreProducto = producto.Nombre,
-                        precio = Convert.ToDouble(precioEntrada)
-                    };
-                    ordenes.Insert(orden);
+                        var orden = new Orden
+                        {
+                            codigo = producto.Codigo,
+                            esCigarrillo = producto.EsCigarrillo,
+                            nombreProducto = producto.Nombre,
+                            precio = Convert.ToDouble(precioEntrada)
+                        };
+                        ordenes.Insert(orden);
+                    }
+                    else {
+                        return false;
+                    }
+                    
                 }
-                
+                return true;
             }
         }
         public void eliminarOrden()
