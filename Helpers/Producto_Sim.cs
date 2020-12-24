@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace Todo_en_uno.Helpers
 {
-    class Producto_Sim
+    public class Producto_Sim
     {
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public double PrecioBase { get; set; }
         public int StockFaltante { get; set; }
         public double Costo { get; set; }
 
-        public Producto_Sim(string n, double pb, int stock)
+        public Producto_Sim(int id, string n, double pb, int stock)
         {
+            Id = id;
             Nombre = n;
             PrecioBase = pb;
             StockFaltante = stock;
