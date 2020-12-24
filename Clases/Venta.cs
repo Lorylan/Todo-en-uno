@@ -14,7 +14,15 @@ namespace Todo_en_uno.Clases
         public double PrecioTotal { get; set; }
         public double PrecioTotalCigarrillo { get; set; }
         public int CantCigarrillos { get; set; }
-
+        public List<Venta> getAll()
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ventas = db.GetCollection<Venta>("ventas");
+                return ventas.Query().ToList();
+            }
+        }
+        
         public void cargarVenta()
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
@@ -29,6 +37,7 @@ namespace Todo_en_uno.Clases
                     CantCigarrillos = this.CantCigarrillos
                 };
                 ventas.Insert(venta);
+               
             }
         }
         public double calcularCredito()

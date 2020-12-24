@@ -126,10 +126,13 @@ namespace Todo_en_uno.Forms
         {
             if (orden.getAll().Count != 0)
             {
-                orden.eliminarOrden();
                 venta.cargarVenta();
+                orden.eliminarOrden();
+                actualizarTablaPrecio();
                 orden = new Orden();
                 venta = new Venta();
+                int cant = venta.getAll().Count;
+                MessageBox.Show("Su venta fue creada con exito, lleva "+cant);
             }
             else {
                 MessageBox.Show("La venta no posee ningun producto");
