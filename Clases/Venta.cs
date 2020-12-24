@@ -39,7 +39,8 @@ namespace Todo_en_uno.Clases
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
                 preferencia_aux = preferencias.Query().ToList().First();
             }
-            return (PrecioTotal + PrecioTotalCigarrillo) * (preferencia_aux.GananciaCredito / 100);
+            double total  =(PrecioTotal + PrecioTotalCigarrillo) * (1+(preferencia_aux.GananciaCredito / 100));
+            return total;
         }
         public double calcularDebito()
         {
@@ -49,7 +50,9 @@ namespace Todo_en_uno.Clases
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
                 preferencia_aux = preferencias.Query().ToList().First();
             }
-            return PrecioTotal + (PrecioTotalCigarrillo * (1+(preferencia_aux.GananciaDebito/100)));
+            double porcentaje = 1 + (preferencia_aux.GananciaDebito / 100);
+            double total = (PrecioTotal + (PrecioTotalCigarrillo * porcentaje));
+            return total;
         }
         public void calcularPrecio() {
             double ganancia;
@@ -75,6 +78,11 @@ namespace Todo_en_uno.Clases
                 }
                 else {
                     PrecioTotal += orden.precio;
+                    if (orden.cantProducto != 0) {
+                        PrecioTotal += (orden.precio * orden.cantProducto)-orden.precio;
+                    }
+                    
+                    
                 }
             }
         }

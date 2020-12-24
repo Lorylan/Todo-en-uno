@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Todo_en_uno.Clases;
 using Todo_en_uno;
 using Todo_en_uno.Helpers;
+using LiteDB;
 
 namespace Todo_en_uno.Forms
 {
@@ -25,9 +26,10 @@ namespace Todo_en_uno.Forms
             txt_precio.Text = "";
         }
         private void actualizarTablaPrecio() {
-            //txt_total.Text = "$" + venta.PrecioTotal.ToString();
-            //txt_total_credito.Text = "$" + venta.calcularCredito().ToString();
-            //txt_total_debito.Text = "$" + venta.calcularDebito().ToString();
+            venta.calcularPrecio();
+            txt_total.Text = "$" + venta.PrecioTotal.ToString();
+            txt_total_credito.Text = "$" + venta.calcularCredito().ToString();
+            txt_total_debito.Text = "$" + venta.calcularDebito().ToString();
             datos_venta.DataSource = orden.getAll();
             
         }
@@ -56,13 +58,14 @@ namespace Todo_en_uno.Forms
             orden = new Orden();
             venta = new Venta();
             btn_eliminar.Enabled = false;
-            if (orden.getAll().Count != 0) {
+            if (orden.getAll().Count != 0)
+            {
                 actualizarTablaPrecio();
                 agregarBotones();
                 primeraOrden = false;
             }
+            
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             
@@ -70,12 +73,11 @@ namespace Todo_en_uno.Forms
 
             if (txt_precio.Text.Trim().Equals(""))
             {
-                orden.cargarOrden(0, txt_codigo.Text, Convert.ToInt32(txt_cant.Text), false);
+                orden.cargarOrden(txt_codigo.Text, Convert.ToInt32(txt_cant.Text), false);
             }
             else {
-                orden.cargarOrden(Convert.ToDouble(txt_precio.Text), txt_codigo.Text, Convert.ToInt32(txt_cant.Text), false);
+                orden.cargarOrdenConPrecio(Convert.ToDouble(txt_precio.Text), txt_codigo.Text, false);
             }
-            //venta.calcularPrecio();
             actualizarTablaPrecio();
             vaciarTxtArriba();
             if (primeraOrden)
@@ -111,7 +113,8 @@ namespace Todo_en_uno.Forms
 
         private void datos_venta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
                 int i = e.RowIndex;
                 var datos = datos_venta.Rows[i];
                 var cant = Convert.ToInt32(datos.Cells["cantProducto"].Value.ToString());
@@ -126,26 +129,32 @@ namespace Todo_en_uno.Forms
                     cant++;
                 }
                 orden.actualualizar(id, cant);
-                datos_venta.DataSource = orden.getAll();
-            
-            
-            
-            
+                actualizarTablaPrecio();
+
+            }
+            catch { 
+                
+            }
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             int i = datos_venta.CurrentRow.Index;
             int id = Convert.ToInt32(datos_venta.Rows[i].Cells["Id"].Value.ToString());
-            orden.elimanar(id);
-            datos_venta.DataSource = orden.getAll();
-            btn_eliminar.Enabled = false;
+            var result = MessageBox.Show("¿Estas seguro que queres borrar esta orden?", "Borrar Orden", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                orden.elimanar(id);
+                datos_venta.DataSource = orden.getAll();
+                btn_eliminar.Enabled = false;
+                actualizarTablaPrecio();
+            }
+            
         }
 
         private void datos_venta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btn_eliminar.Enabled = true;
-            
         }
     }
 }
