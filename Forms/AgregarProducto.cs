@@ -53,6 +53,7 @@ namespace Todo_en_uno.Forms
                     p.PrecioVenta = double.Parse(TxtPVenta.Text);
                     p.StockActual = int.Parse(TxtStock.Text);
                     p.StockMinimo = int.Parse(TxtStockMin.Text);
+                    p.EsCigarrillo = CheckCigarrillo.Checked;
                     if(id == null)
                     {
                         db.GetCollection<Producto>("productos").Insert(p);
@@ -77,6 +78,7 @@ namespace Todo_en_uno.Forms
                 TxtStock.Text = p.StockActual.ToString();
                 TxtStockMin.Text = p.StockMinimo.ToString();
                 LabelPrecioUnidad.Text = p.PrecioBase.ToString();
+                CheckCigarrillo.Checked = p.EsCigarrillo;
             }
         }
 
