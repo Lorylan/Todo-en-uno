@@ -37,7 +37,7 @@ Aplicacion para Todo En Uno
   ganancia cigarrillo = cant cigarrillos * 20
   plata reponer = total venta cigarrillo - ganancia cigarrillo
   pago al negocio mercaderia= sumatoria venta propia - 25% 
-  pago negocia cigarrillo = sumatoria venta propia cigarrillo - (cant cigarrillo *20)
+  pago negocia cigarrillo = sumatoria venta propia cigarrillo 
   /--------------------------------------------------------------------------------------/
   *Lista de producto
     Filtro por cod de barra y nombre
