@@ -90,6 +90,11 @@
     </Compile>
     <Compile Include="Forms\NuevaNota.Designer.cs">
       <DependentUpon>NuevaNota.cs</DependentUpon>
+    <Compile Include="Forms\ReporteDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReporteDiario.Designer.cs">
+      <DependentUpon>ReporteDiario.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Simulacro.cs">
       <SubType>Form</SubType>
@@ -119,6 +124,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NuevaNota.resx">
       <DependentUpon>NuevaNota.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReporteDiario.resx">
+      <DependentUpon>ReporteDiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Simulacro.resx">
       <DependentUpon>Simulacro.cs</DependentUpon>
