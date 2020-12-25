@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Nota.cs" />
     <Compile Include="Clases\Orden.cs" />
     <Compile Include="Clases\Preferencia.cs" />
     <Compile Include="Clases\Producto.cs" />
@@ -60,6 +61,12 @@
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Venta.cs" />
+    <Compile Include="Forms\Fiado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fiado.Designer.cs">
+      <DependentUpon>Fiado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +85,12 @@
     <Compile Include="Forms\Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NuevaNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NuevaNota.Designer.cs">
+      <DependentUpon>NuevaNota.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Simulacro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +105,9 @@
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms\Fiado.resx">
+      <DependentUpon>Fiado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NuevaNota.resx">
+      <DependentUpon>NuevaNota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Simulacro.resx">
       <DependentUpon>Simulacro.cs</DependentUpon>
