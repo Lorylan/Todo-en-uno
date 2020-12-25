@@ -27,7 +27,7 @@ namespace Todo_en_uno.Forms
         }
         private void actualizarTablaPrecio() {
             venta.calcularPrecio();
-            txt_total.Text = "$" + venta.PrecioTotal.ToString();
+            txt_total.Text = "$" + (venta.PrecioTotal + venta.PrecioTotalCigarrillo).ToString(); ;
             txt_total_credito.Text = "$" + venta.calcularCredito(esVentaPropia).ToString();
             txt_total_debito.Text = "$" + venta.calcularDebito(esVentaPropia).ToString();
             datos_venta.DataSource = orden.getAll(esVentaPropia);
@@ -135,7 +135,7 @@ namespace Todo_en_uno.Forms
             if (orden.getAll(esVentaPropia).Count != 0)
             {
 
-                venta.cargarVenta(esVentaPropia);
+                venta.cargarVenta();
                 venta.actualizarStock();
                 orden.eliminarOrden();
                 actualizarTablaPrecio();

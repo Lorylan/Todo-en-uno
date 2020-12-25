@@ -42,35 +42,18 @@ namespace Todo_en_uno.Clases
                 }
             }
         }
-        public void cargarVenta(bool esVentaPropia)
+        public void cargarVenta()
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ventas = db.GetCollection<Venta>("ventas");
-                if (esVentaPropia)
+                var venta = new Venta
                 {
-                    var venta = new Venta
-                    {
-                        PrecioTotal = this.PrecioTotal,
-                        PrecioTotalCigarrillo = this.PrecioTotalCigarrillo ,
-                        CantCigarrillos = this.CantCigarrillos
-                    };
-                    ventas.Insert(venta);
-                }
-                else {
-                    var preferencias = db.GetCollection<Preferencia>("preferencias");
-                    var preferencia = preferencias.Query().ToList().First();
-                   
-                    var venta = new Venta
-                    {
-                        PrecioTotal = this.PrecioTotal * (preferencia.Ganancia / 100),
-                        PrecioTotalCigarrillo = this.PrecioTotalCigarrillo +(CantCigarrillos * preferencia.GananciaCigarrillo),
-                        CantCigarrillos = this.CantCigarrillos
-                    };
-                    ventas.Insert(venta);
-                }
-                
-               
+                    PrecioTotal = this.PrecioTotal,
+                    PrecioTotalCigarrillo = this.PrecioTotalCigarrillo ,
+                    CantCigarrillos = this.CantCigarrillos
+                };
+                ventas.Insert(venta);
             }
         }
         public double calcularCredito(bool esVentaPropia)
@@ -132,9 +115,13 @@ namespace Todo_en_uno.Clases
                     PrecioTotalCigarrillo += orden.precio;
                 }
                 else {
-                    PrecioTotal += orden.precio;
-                    if (orden.cantProducto != 0) {
-                        PrecioTotal += (orden.precio * orden.cantProducto)-orden.precio;
+                   
+                    if (orden.cantProducto != 0)
+                    {
+                        PrecioTotal += (orden.precio * orden.cantProducto);
+                    }
+                    else {
+                        PrecioTotal += orden.precio;
                     }
                 }
             }
