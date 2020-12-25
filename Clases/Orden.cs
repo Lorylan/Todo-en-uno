@@ -113,10 +113,7 @@ namespace Todo_en_uno.Clases
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ordenes = db.GetCollection<Orden>("ordenes");
-                List<Orden> list_orden= ordenes.Query().ToList();
-                foreach (Orden aux in list_orden) {
-                    ordenes.Delete(aux.Id);
-                }
+                ordenes.DeleteAll();
             }
         }
         public List<Orden> getAll(bool esVentaPropia)

@@ -135,7 +135,7 @@ namespace Todo_en_uno.Forms
             if (orden.getAll(esVentaPropia).Count != 0)
             {
 
-                venta.cargarVenta();
+                venta.cargarVenta(esVentaPropia);
                 venta.actualizarStock();
                 orden.eliminarOrden();
                 actualizarTablaPrecio();

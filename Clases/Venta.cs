@@ -14,6 +14,7 @@ namespace Todo_en_uno.Clases
         public double PrecioTotal { get; set; }
         public double PrecioTotalCigarrillo { get; set; }
         public int CantCigarrillos { get; set; }
+        public bool esVentaPropia { get; set; }
 
         public DateTime Fecha { get; set; }
         public List<Venta> getAll()
@@ -44,7 +45,7 @@ namespace Todo_en_uno.Clases
                 }
             }
         }
-        public void cargarVenta()
+        public void cargarVenta(bool esVentaPropia)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
@@ -54,7 +55,8 @@ namespace Todo_en_uno.Clases
                     PrecioTotal = this.PrecioTotal,
                     PrecioTotalCigarrillo = this.PrecioTotalCigarrillo ,
                     CantCigarrillos = this.CantCigarrillos,
-                    Fecha = DateTime.Now
+                    Fecha = DateTime.Now,
+                    esVentaPropia = esVentaPropia
                 };
                 ventas.Insert(venta);
             }
@@ -94,6 +96,102 @@ namespace Todo_en_uno.Clases
                 return total;
             }
             
+        }
+        public Venta getVentasHoyPropia() {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ventas = db.GetCollection<Venta>("ventas");
+                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date == DateTime.Now.Date && x.esVentaPropia).ToList();
+
+                Venta sumatoriaVenta = new Venta();
+                sumatoriaVenta.CantCigarrillos = 0;
+                sumatoriaVenta.PrecioTotal = 0;
+                sumatoriaVenta.PrecioTotalCigarrillo = 0;
+                foreach (Venta v in ventasHoy) {
+                    sumatoriaVenta.CantCigarrillos += v.CantCigarrillos;
+                    sumatoriaVenta.PrecioTotal += v.PrecioTotal;
+                    sumatoriaVenta.PrecioTotalCigarrillo += v.PrecioTotalCigarrillo;
+                }
+                return sumatoriaVenta;
+            }
+        }
+        public Venta getVentasMesPropia()
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ventas = db.GetCollection<Venta>("ventas");
+                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date.Month == DateTime.Now.Date.Month && x.esVentaPropia && x.Fecha.Date.Year == DateTime.Now.Date.Year).ToList();
+
+                Venta sumatoriaVenta = new Venta();
+                sumatoriaVenta.CantCigarrillos = 0;
+                sumatoriaVenta.PrecioTotal = 0;
+                sumatoriaVenta.PrecioTotalCigarrillo = 0;
+                foreach (Venta v in ventasHoy)
+                {
+                    sumatoriaVenta.CantCigarrillos += v.CantCigarrillos;
+                    sumatoriaVenta.PrecioTotal += v.PrecioTotal;
+                    sumatoriaVenta.PrecioTotalCigarrillo += v.PrecioTotalCigarrillo;
+                }
+                return sumatoriaVenta;
+            }
+        }
+        public Venta getVentasHoy()
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ventas = db.GetCollection<Venta>("ventas");
+                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date == DateTime.Now.Date && x.esVentaPropia).ToList();
+
+                Venta sumatoriaVenta = new Venta();
+                sumatoriaVenta.CantCigarrillos = 0;
+                sumatoriaVenta.PrecioTotal = 0;
+                sumatoriaVenta.PrecioTotalCigarrillo = 0;
+                foreach (Venta v in ventasHoy)
+                {
+                    sumatoriaVenta.CantCigarrillos += v.CantCigarrillos;
+                    sumatoriaVenta.PrecioTotal += v.PrecioTotal;
+                    sumatoriaVenta.PrecioTotalCigarrillo += v.PrecioTotalCigarrillo;
+                }
+                return sumatoriaVenta;
+            }
+        }
+        public Venta getVentasMes()
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ventas = db.GetCollection<Venta>("ventas");
+                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date.Month == DateTime.Now.Date.Month && x.esVentaPropia).ToList();
+
+                Venta sumatoriaVenta = new Venta();
+                sumatoriaVenta.CantCigarrillos = 0;
+                sumatoriaVenta.PrecioTotal = 0;
+                sumatoriaVenta.PrecioTotalCigarrillo = 0;
+                foreach (Venta v in ventasHoy)
+                {
+                    sumatoriaVenta.CantCigarrillos += v.CantCigarrillos;
+                    sumatoriaVenta.PrecioTotal += v.PrecioTotal;
+                    sumatoriaVenta.PrecioTotalCigarrillo += v.PrecioTotalCigarrillo;
+                }
+                return sumatoriaVenta;
+            }
+        }
+        public double calcularGananciaCigarrillo() {
+            Preferencia preferencia_aux;
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var preferencias = db.GetCollection<Preferencia>("preferencias");
+                preferencia_aux = preferencias.Query().ToList().First();
+            }
+            return CantCigarrillos * preferencia_aux.GananciaCigarrillo;
+        }
+        public double calcularGananciaMercaderia() {
+            Preferencia preferencia_aux;
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var preferencias = db.GetCollection<Preferencia>("preferencias");
+                preferencia_aux = preferencias.Query().ToList().First();
+            }
+            return PrecioTotal *(preferencia_aux.Ganancia/100);
         }
         public void calcularPrecio() {
             double ganancia;
