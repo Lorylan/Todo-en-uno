@@ -25,12 +25,12 @@ namespace Todo_en_uno.Forms
             datos_ventas.DataSource = venta.getAll();
             if (deHoy)
             {
-                sumatoriaVentaPropia = venta.getVentasHoyPropia();
-                sumatoriaVenta = venta.getVentasHoy();
+                sumatoriaVentaPropia = venta.getVentasHoy(true);
+                sumatoriaVenta = venta.getVentasHoy(false);
             }
             else {
-                sumatoriaVentaPropia = venta.getVentasMesPropia();
-                sumatoriaVenta = venta.getVentasMes();
+                sumatoriaVentaPropia = venta.getVentasMes(true);
+                sumatoriaVenta = venta.getVentasMes(false);
             }
             txt_ganancia_c.Text= sumatoriaVenta.PrecioTotalCigarrillo.ToString();
             txt_ganancia_m.Text = sumatoriaVenta.PrecioTotal.ToString();

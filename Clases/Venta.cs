@@ -84,7 +84,8 @@ namespace Todo_en_uno.Clases
             {
                 return 0;
             }
-            else {
+            else
+            {
                 Preferencia preferencia_aux;
                 using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
                 {
@@ -95,32 +96,14 @@ namespace Todo_en_uno.Clases
                 double total = (PrecioTotal + (PrecioTotalCigarrillo * porcentaje));
                 return total;
             }
-            
-        }
-        public Venta getVentasHoyPropia() {
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
-            {
-                var ventas = db.GetCollection<Venta>("ventas");
-                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date == DateTime.Now.Date && x.esVentaPropia).ToList();
 
-                Venta sumatoriaVenta = new Venta();
-                sumatoriaVenta.CantCigarrillos = 0;
-                sumatoriaVenta.PrecioTotal = 0;
-                sumatoriaVenta.PrecioTotalCigarrillo = 0;
-                foreach (Venta v in ventasHoy) {
-                    sumatoriaVenta.CantCigarrillos += v.CantCigarrillos;
-                    sumatoriaVenta.PrecioTotal += v.PrecioTotal;
-                    sumatoriaVenta.PrecioTotalCigarrillo += v.PrecioTotalCigarrillo;
-                }
-                return sumatoriaVenta;
-            }
         }
-        public Venta getVentasMesPropia()
+        public Venta getVentasHoy(bool esVentaPropia)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ventas = db.GetCollection<Venta>("ventas");
-                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date.Month == DateTime.Now.Date.Month && x.esVentaPropia && x.Fecha.Date.Year == DateTime.Now.Date.Year).ToList();
+                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date == DateTime.Now.Date && x.esVentaPropia == esVentaPropia).ToList();
 
                 Venta sumatoriaVenta = new Venta();
                 sumatoriaVenta.CantCigarrillos = 0;
@@ -135,32 +118,12 @@ namespace Todo_en_uno.Clases
                 return sumatoriaVenta;
             }
         }
-        public Venta getVentasHoy()
+        public Venta getVentasMes(bool esVentaPropia)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ventas = db.GetCollection<Venta>("ventas");
-                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date == DateTime.Now.Date && x.esVentaPropia).ToList();
-
-                Venta sumatoriaVenta = new Venta();
-                sumatoriaVenta.CantCigarrillos = 0;
-                sumatoriaVenta.PrecioTotal = 0;
-                sumatoriaVenta.PrecioTotalCigarrillo = 0;
-                foreach (Venta v in ventasHoy)
-                {
-                    sumatoriaVenta.CantCigarrillos += v.CantCigarrillos;
-                    sumatoriaVenta.PrecioTotal += v.PrecioTotal;
-                    sumatoriaVenta.PrecioTotalCigarrillo += v.PrecioTotalCigarrillo;
-                }
-                return sumatoriaVenta;
-            }
-        }
-        public Venta getVentasMes()
-        {
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
-            {
-                var ventas = db.GetCollection<Venta>("ventas");
-                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date.Month == DateTime.Now.Date.Month && x.esVentaPropia).ToList();
+                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date.Month == DateTime.Now.Date.Month && x.esVentaPropia== esVentaPropia && x.Fecha.Date.Year == DateTime.Now.Date.Year).ToList();
 
                 Venta sumatoriaVenta = new Venta();
                 sumatoriaVenta.CantCigarrillos = 0;
