@@ -17,11 +17,7 @@ namespace Todo_en_uno
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Fiado());
-=======
             Application.Run(new FormVenta(false));
->>>>>>> 868c72c60bffb62c1686ba06e848ee0d490d1658
         }
     }
 }
