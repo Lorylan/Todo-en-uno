@@ -47,7 +47,6 @@
             this.txt_precio = new System.Windows.Forms.TextBox();
             this.btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datos_venta)).BeginInit();
-
             this.SuspendLayout();
             // 
             // Titulo
@@ -105,7 +104,8 @@
             this.datos_venta.Name = "datos_venta";
             this.datos_venta.Size = new System.Drawing.Size(668, 285);
             this.datos_venta.TabIndex = 5;
-            
+            this.datos_venta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datos_venta_CellClick);
+            this.datos_venta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datos_venta_CellContentClick);
             // 
             // label2
             // 
@@ -176,7 +176,6 @@
             this.btn_nueva_venta.Text = "Fin de venta";
             this.btn_nueva_venta.UseVisualStyleBackColor = true;
             this.btn_nueva_venta.Click += new System.EventHandler(this.btn_nueva_venta_Click);
-
             // 
             // timer1
             // 
@@ -209,6 +208,7 @@
             this.btn_eliminar.TabIndex = 16;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // FormVenta
             // 

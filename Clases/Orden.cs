@@ -18,56 +18,94 @@ namespace Todo_en_uno.Clases
         public double precio { get; set; }
         public int cantProducto { get; set; }
 
+        public bool ventaPropia { get; set; }
 
-        public void cargarOrden(double? precioEntrada, string codigo, int cantProducto, bool esVentaPropia)
+
+        public bool  cargarOrden(string codigo, int cantProducto, bool esVentaPropia)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ordenes = db.GetCollection<Orden>("ordenes");
-                var productos = db.GetCollection<Producto>("productos");
-                var producto_aux = productos.Query()
-                .Where(x => x.Codigo.Equals(codigo))
-                .ToList().First();
-
-                if (precioEntrada == null)
+                var orden_aux = ordenes.Find(x => x.codigo == codigo && x.cantProducto > 0 ).FirstOrDefault();
+                if (orden_aux!= null)
                 {
-                    if (esVentaPropia)
+                    orden_aux.cantProducto = orden_aux.cantProducto + cantProducto;
+                    ordenes.Update(orden_aux);
+                }
+                else {
+                    
+                    var productos = db.GetCollection<Producto>("productos");
+                    var producto = productos.Find(x => x.Codigo == codigo ).FirstOrDefault();
+                    if (producto != null)
+                    {
+                        if (esVentaPropia)
+                        {
+                            var orden = new Orden
+                            {
+                                codigo = producto.Codigo,
+                                esCigarrillo = producto.EsCigarrillo,
+                                nombreProducto = producto.Nombre,
+                                precio = producto.PrecioBase,
+                                cantProducto = cantProducto,
+                                ventaPropia = true
+                            };
+                            ordenes.Insert(orden);
+                        }
+                        else
+                        {
+                            var orden = new Orden
+                            {
+                                codigo = producto.Codigo,
+                                esCigarrillo = producto.EsCigarrillo,
+                                nombreProducto = producto.Nombre,
+                                precio = producto.PrecioVenta,
+                                cantProducto = cantProducto,
+                                ventaPropia = false
+                            };
+                            ordenes.Insert(orden);
+                        }
+                        
+                    }
+                    else {
+                        return false;
+                    }
+                    
+                }
+                return true;
+            }
+        }
+        public bool cargarOrdenConPrecio(double precioEntrada, string codigo, bool esVentaPropia)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ordenes = db.GetCollection<Orden>("ordenes");
+                var orden_aux = ordenes.Find(x => x.codigo == codigo && x.cantProducto == 0 && ventaPropia == esVentaPropia).FirstOrDefault();
+                if (orden_aux != null)
+                {
+                    orden_aux.precio = orden_aux.precio + precioEntrada;
+                    ordenes.Update(orden_aux);
+                }
+                else {
+                    var productos = db.GetCollection<Producto>("productos");
+                    var producto = productos.Find(x => x.Codigo == codigo ).FirstOrDefault();
+                    if (producto != null)
                     {
                         var orden = new Orden
                         {
-                            codigo = producto_aux.Codigo,
-                            esCigarrillo = producto_aux.EsCigarrillo,
-                            nombreProducto = producto_aux.Nombre,
-                            precio = producto_aux.PrecioBase,
-                            cantProducto = cantProducto
+                            codigo = producto.Codigo,
+                            esCigarrillo = producto.EsCigarrillo,
+                            nombreProducto = producto.Nombre,
+                            precio = precioEntrada,
+                            ventaPropia = esVentaPropia
                         };
                         ordenes.Insert(orden);
                     }
-                    else
-                    {
-                        var orden = new Orden
-                        {
-                            codigo = producto_aux.Codigo,
-                            esCigarrillo = producto_aux.EsCigarrillo,
-                            nombreProducto = producto_aux.Nombre,
-                            precio = producto_aux.PrecioVenta,
-                            cantProducto = cantProducto
-                        };
-                        ordenes.Insert(orden);
+                    else {
+                        return false;
                     }
+                    
                 }
-                else
-                {
-                    var orden = new Orden
-                    {
-                        codigo = producto_aux.Codigo,
-                        esCigarrillo = producto_aux.EsCigarrillo,
-                        nombreProducto = producto_aux.Nombre,
-                        precio = Convert.ToDouble(precioEntrada),
-                        cantProducto = cantProducto
-                    };
-                    ordenes.Insert(orden);
-                }
+                return true;
             }
         }
         public void eliminarOrden()
@@ -75,15 +113,43 @@ namespace Todo_en_uno.Clases
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ordenes = db.GetCollection<Orden>("ordenes");
-                ordenes.DeleteAll();
+                List<Orden> list_orden= ordenes.Query().ToList();
+                foreach (Orden aux in list_orden) {
+                    ordenes.Delete(aux.Id);
+                }
             }
         }
-        public List<Orden> getAll()
+        public List<Orden> getAll(bool esVentaPropia)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ordenes = db.GetCollection<Orden>("ordenes");
                 return ordenes.Query().ToList();
+            }
+        }
+        public void actualualizar(int id, int cantProducto)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ordenes = db.GetCollection<Orden>("ordenes");
+                var orden = ordenes.FindById(id);
+                orden.cantProducto = cantProducto;
+                ordenes.Update(orden);
+            }
+        }
+        public Orden FindId(int id)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ordenes = db.GetCollection<Orden>("ordenes");
+                return ordenes.FindById(id);
+            }
+        }
+        public void elimanar(int id) {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ordenes = db.GetCollection<Orden>("ordenes");
+                ordenes.Delete(id); 
             }
         }
     }
