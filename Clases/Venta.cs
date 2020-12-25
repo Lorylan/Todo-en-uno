@@ -14,6 +14,8 @@ namespace Todo_en_uno.Clases
         public double PrecioTotal { get; set; }
         public double PrecioTotalCigarrillo { get; set; }
         public int CantCigarrillos { get; set; }
+
+        public DateTime Fecha { get; set; }
         public List<Venta> getAll()
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
@@ -51,7 +53,8 @@ namespace Todo_en_uno.Clases
                 {
                     PrecioTotal = this.PrecioTotal,
                     PrecioTotalCigarrillo = this.PrecioTotalCigarrillo ,
-                    CantCigarrillos = this.CantCigarrillos
+                    CantCigarrillos = this.CantCigarrillos,
+                    Fecha = DateTime.Now
                 };
                 ventas.Insert(venta);
             }
