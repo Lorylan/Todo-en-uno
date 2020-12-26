@@ -67,8 +67,8 @@ namespace Todo_en_uno.Clases
                 return 0;
             }
             else{
-                Preferencia preferencia_aux = new Preferencia();
-                preferencia_aux.getPreferencia();
+                Preferencia preferencia_aux = new Preferencia().getPreferencia();
+                
                 double total = (PrecioTotal + PrecioTotalCigarrillo) * (1 + (preferencia_aux.GananciaCredito / 100));
                 return total;
             }
@@ -82,8 +82,7 @@ namespace Todo_en_uno.Clases
             }
             else
             {
-                Preferencia preferencia_aux = new Preferencia();
-                preferencia_aux.getPreferencia();
+                Preferencia preferencia_aux = new Preferencia().getPreferencia();
                 double porcentaje = 1 + (preferencia_aux.GananciaDebito / 100);
                 double total = (PrecioTotal + (PrecioTotalCigarrillo * porcentaje));
                 return total;
@@ -131,13 +130,11 @@ namespace Todo_en_uno.Clases
             }
         }
         public double calcularGananciaCigarrillo() {
-            Preferencia preferencia_aux = new Preferencia();
-            preferencia_aux.getPreferencia();
+            Preferencia preferencia_aux = new Preferencia().getPreferencia();
             return CantCigarrillos * preferencia_aux.GananciaCigarrillo;
         }
         public double calcularGananciaMercaderia() {
-            Preferencia preferencia_aux = new Preferencia();
-            preferencia_aux.getPreferencia();
+            Preferencia preferencia_aux = new Preferencia().getPreferencia();
             return PrecioTotal *(preferencia_aux.Ganancia/100);
         }
         public void calcularPrecio() {
@@ -147,8 +144,7 @@ namespace Todo_en_uno.Clases
             CantCigarrillos = 0;
             PrecioTotalCigarrillo = 0;
             List<Orden> ordenes;
-            Preferencia preferencia_aux = new Preferencia();
-            preferencia_aux.getPreferencia();
+            Preferencia preferencia_aux = new Preferencia().getPreferencia();
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 ganancia = preferencia_aux.Ganancia;
@@ -160,7 +156,15 @@ namespace Todo_en_uno.Clases
                 if (orden.esCigarrillo)
                 {
                     CantCigarrillos++;
-                    PrecioTotalCigarrillo += orden.precio;
+                    if (orden.cantProducto != 0)
+                    {
+                        PrecioTotalCigarrillo += (orden.precio * orden.cantProducto);
+                    }
+                    else
+                    {
+                        PrecioTotalCigarrillo += orden.precio;
+                    }
+                    
                 }
                 else {
                    
