@@ -28,6 +28,8 @@ namespace Todo_en_uno.Forms
         private void Refrescar()
         {
             dataGridView1.DataSource = Nota.GetNotas();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
