@@ -60,6 +60,7 @@ namespace Todo_en_uno.Forms
             datos_venta.Columns[6].HeaderText = "Cant. Productos";
             datos_venta.Columns[7].Width = 50;
             datos_venta.Columns[8].Visible = false;
+            
 
         }
         //.......................................................................//
