@@ -16,5 +16,8 @@ namespace Todo_en_uno.Clases
         public double GananciaDebito { set; get; }
         public double GananciaCredito { get; set; }
 
+        
+    
+
     }
 }
