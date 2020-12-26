@@ -50,8 +50,8 @@ namespace Todo_en_uno
 
         private void btn_notas_Click(object sender, EventArgs e)
         {
-            NuevaNota n = new NuevaNota();
-            n.ShowDialog();
+            Fiado f = new Fiado();
+            f.ShowDialog();
         }
 
         private void btn_ganancias_Click(object sender, EventArgs e)

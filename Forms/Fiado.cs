@@ -41,7 +41,7 @@ namespace Todo_en_uno.Forms
             {
                 return int.Parse(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
             }
-            catch
+            catch(Exception e)
             {
                 return null;
             }
