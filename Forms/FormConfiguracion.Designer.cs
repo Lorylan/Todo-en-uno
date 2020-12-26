@@ -1,7 +1,7 @@
 ﻿
 namespace Todo_en_uno.Forms
 {
-    partial class Configuracion
+    partial class FormConfiguracion
     {
         /// <summary>
         /// Required designer variable.

@@ -7,14 +7,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Todo_en_uno.Forms;
 
 namespace Todo_en_uno
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
+        }
+
+        private void btn_venta_Click(object sender, EventArgs e)
+        {
+            FormVenta f = new FormVenta(false);
+            f.ShowDialog();
+        }
+
+        private void btn_venta_propia_Click(object sender, EventArgs e)
+        {
+            FormVenta f = new FormVenta(true);
+            f.ShowDialog();
+        }
+
+        private void btn_reporte_diario_Click(object sender, EventArgs e)
+        {
+            Reporte r = new Reporte(true);
+            r.ShowDialog();
+        }
+
+        private void btn_reporte_mensual_Click(object sender, EventArgs e)
+        {
+            Reporte r = new Reporte(false);
+            r.ShowDialog();
+        }
+
+        private void btn_inv_Click(object sender, EventArgs e)
+        {
+            Inventario i = new Inventario();
+            i.ShowDialog();
+        }
+
+        private void btn_notas_Click(object sender, EventArgs e)
+        {
+            NuevaNota n = new NuevaNota();
+            n.ShowDialog();
+        }
+
+        private void btn_ganancias_Click(object sender, EventArgs e)
+        {
+            FormConfiguracion fc = new FormConfiguracion();
+            fc.ShowDialog();
         }
     }
 }

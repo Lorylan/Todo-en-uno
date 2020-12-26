@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Todo_en_uno.Forms
 {
-    public partial class Configuracion : Form
+    public partial class FormConfiguracion : Form
     {
-        public Configuracion()
+        public FormConfiguracion()
         {
             InitializeComponent();
         }
