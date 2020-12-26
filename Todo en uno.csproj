@@ -117,6 +117,9 @@
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms\FormConfiguracion.resx">
+      <DependentUpon>FormConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fiado.resx">
       <DependentUpon>Fiado.cs</DependentUpon>
     </EmbeddedResource>
