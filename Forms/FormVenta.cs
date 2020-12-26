@@ -32,6 +32,8 @@ namespace Todo_en_uno.Forms
             txt_total_debito.Text = "$" + venta.calcularDebito(esVentaPropia).ToString();
             datos_venta.DataSource = orden.getAll(esVentaPropia);
             
+
+
         }
         public void agregarBotones() {
             DataGridViewButtonColumn colMas = new DataGridViewButtonColumn()
@@ -49,6 +51,16 @@ namespace Todo_en_uno.Forms
             };
             datos_venta.Columns.Insert(5, colMenos);
             datos_venta.Columns.Insert(7, colMas);
+            datos_venta.Columns[0].Visible = false;
+            datos_venta.Columns[1].HeaderText = "Codigo";
+            datos_venta.Columns[2].HeaderText = "Nombre";
+            datos_venta.Columns[3].HeaderText = "Es cigarrillo";
+            datos_venta.Columns[4].HeaderText = "Precio";
+            datos_venta.Columns[5].Width = 50;
+            datos_venta.Columns[6].HeaderText = "Cant. Productos";
+            datos_venta.Columns[7].Width = 50;
+            datos_venta.Columns[8].Visible = false;
+
         }
         //.......................................................................//
 
