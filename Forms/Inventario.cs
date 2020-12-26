@@ -28,6 +28,13 @@ namespace Todo_en_uno.Forms
         private void Refrescar()
         {
             dataGridView1.DataSource = Producto.GetProductos();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].HeaderText = "Precio base";
+            dataGridView1.Columns[3].HeaderText = "Precio venta";
+            dataGridView1.Columns[4].HeaderText = "Stock actual";
+            dataGridView1.Columns[5].HeaderText = "Stock minimo";
+            dataGridView1.Columns[7].HeaderText = "Es cigarrillo";
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
