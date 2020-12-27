@@ -29,6 +29,7 @@ namespace Todo_en_uno.Forms
         {
             dataGridView1.DataSource = Nota.GetNotas();
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns["Texto"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
@@ -63,6 +64,7 @@ namespace Todo_en_uno.Forms
                     }
                 }
             }
+            TxtTexto.Text = "";
             Refrescar();
         }
 
