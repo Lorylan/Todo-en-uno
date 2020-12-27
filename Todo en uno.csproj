@@ -168,5 +168,11 @@
   <ItemGroup>
     <Folder Include="Db\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2020-12-27_16-36-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
