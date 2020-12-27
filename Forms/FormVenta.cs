@@ -51,14 +51,18 @@ namespace Todo_en_uno.Forms
             };
             datos_venta.Columns.Insert(5, colMenos);
             datos_venta.Columns.Insert(7, colMas);
+            datos_venta.RowHeadersVisible = false;
+            datos_venta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             datos_venta.Columns[0].Visible = false;
             datos_venta.Columns[1].HeaderText = "Codigo";
             datos_venta.Columns[2].HeaderText = "Nombre";
             datos_venta.Columns[3].HeaderText = "Es cigarrillo";
+            datos_venta.Columns[3].Width = 50;
             datos_venta.Columns[4].HeaderText = "Precio";
-            datos_venta.Columns[5].Width = 50;
-            datos_venta.Columns[6].HeaderText = "Cant. Productos";
-            datos_venta.Columns[7].Width = 50;
+            datos_venta.Columns[5].Width = 25;
+            datos_venta.Columns[6].HeaderText = "Cant.";
+            datos_venta.Columns[6].Width = 50;
+            datos_venta.Columns[7].Width = 25;
             datos_venta.Columns[8].Visible = false;
             
 
@@ -71,7 +75,8 @@ namespace Todo_en_uno.Forms
             esVentaPropia = ventaPropia;
             orden = new Orden();
             venta = new Venta();
-            btn_eliminar.Enabled = false;
+            
+            
             if (orden.getAll(esVentaPropia).Count != 0)
             {
                 actualizarTablaPrecio();
@@ -190,22 +195,26 @@ namespace Todo_en_uno.Forms
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            int i = datos_venta.CurrentRow.Index;
-            int id = Convert.ToInt32(datos_venta.Rows[i].Cells["Id"].Value.ToString());
-            var result = MessageBox.Show("¿Estas seguro que queres borrar esta orden?", "Borrar Orden", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                orden.elimanar(id);
-                datos_venta.DataSource = orden.getAll(esVentaPropia);
-                btn_eliminar.Enabled = false;
-                actualizarTablaPrecio();
+            if (btn_eliminar.BackColor != Color.DimGray) {
+                int i = datos_venta.CurrentRow.Index;
+                int id = Convert.ToInt32(datos_venta.Rows[i].Cells["Id"].Value.ToString());
+                var result = MessageBox.Show("¿Estas seguro que queres borrar esta orden?", "Borrar Orden", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    orden.elimanar(id);
+                    datos_venta.DataSource = orden.getAll(esVentaPropia);
+                    btn_eliminar.BackColor = Color.DimGray;
+                    actualizarTablaPrecio();
+
+                }
             }
             
         }
 
         private void datos_venta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btn_eliminar.Enabled = true;
+            btn_eliminar.BackColor = Color.FromArgb(36, 24, 52);
+
         }
     }
 }

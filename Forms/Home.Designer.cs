@@ -37,21 +37,21 @@ namespace Todo_en_uno
             this.btn_ganancias = new System.Windows.Forms.Button();
             this.btn_notas = new System.Windows.Forms.Button();
             this.btn_inv = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_reporte_mensual = new System.Windows.Forms.Button();
             this.btn_reporte_diario = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_venta_propia = new System.Windows.Forms.Button();
             this.btn_venta = new System.Windows.Forms.Button();
-            this.labelVentas = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.labelVentas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -168,6 +168,24 @@ namespace Todo_en_uno
             this.btn_inv.UseVisualStyleBackColor = false;
             this.btn_inv.Click += new System.EventHandler(this.btn_inv_Click);
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(0, 29);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(24, 111);
+            this.panel9.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(318, 29);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(20, 111);
+            this.panel8.TabIndex = 9;
+            // 
             // label2
             // 
             this.label2.AllowDrop = true;
@@ -231,6 +249,24 @@ namespace Todo_en_uno
             this.btn_reporte_diario.Text = "Reporte Diario";
             this.btn_reporte_diario.UseVisualStyleBackColor = false;
             this.btn_reporte_diario.Click += new System.EventHandler(this.btn_reporte_diario_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 29);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(24, 85);
+            this.panel7.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(318, 29);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(20, 85);
+            this.panel6.TabIndex = 8;
             // 
             // label1
             // 
@@ -297,58 +333,6 @@ namespace Todo_en_uno
             this.btn_venta.UseVisualStyleBackColor = false;
             this.btn_venta.Click += new System.EventHandler(this.btn_venta_Click);
             // 
-            // labelVentas
-            // 
-            this.labelVentas.AllowDrop = true;
-            this.labelVentas.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.labelVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelVentas.Font = new System.Drawing.Font("Ink Free", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.labelVentas.Location = new System.Drawing.Point(0, 0);
-            this.labelVentas.Name = "labelVentas";
-            this.labelVentas.Size = new System.Drawing.Size(338, 29);
-            this.labelVentas.TabIndex = 5;
-            this.labelVentas.Text = "Ventas";
-            this.labelVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(318, 29);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(20, 111);
-            this.panel8.TabIndex = 9;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(0, 29);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(24, 111);
-            this.panel9.TabIndex = 10;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 29);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(24, 85);
-            this.panel7.TabIndex = 9;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(318, 29);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(20, 85);
-            this.panel6.TabIndex = 8;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -366,6 +350,22 @@ namespace Todo_en_uno
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(24, 88);
             this.panel4.TabIndex = 6;
+            // 
+            // labelVentas
+            // 
+            this.labelVentas.AllowDrop = true;
+            this.labelVentas.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.labelVentas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelVentas.Font = new System.Drawing.Font("Ink Free", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.labelVentas.Location = new System.Drawing.Point(0, 0);
+            this.labelVentas.Name = "labelVentas";
+            this.labelVentas.Size = new System.Drawing.Size(338, 29);
+            this.labelVentas.TabIndex = 5;
+            this.labelVentas.Text = "Ventas";
+            this.labelVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Home
             // 
