@@ -20,6 +20,7 @@ namespace Todo_en_uno.Forms
         public Simulacro()
         {
             InitializeComponent();
+            
         }
 
         private void Simulacro_Load(object sender, EventArgs e)
@@ -41,7 +42,9 @@ namespace Todo_en_uno.Forms
             items = resul;
             b.DataSource = resul;
             dataGridView1.DataSource = b;
-            labelCosto.Text += String.Format("{0:0.##}", costoFinal);        
+            labelCosto.Text += String.Format("{0:0.##}", costoFinal);
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns["Id"].Visible = false;
         }
 
         private void btn_mod_Click(object sender, EventArgs e)
@@ -52,7 +55,7 @@ namespace Todo_en_uno.Forms
             try
             {
                 p.StockFaltante = int.Parse(TxtCant.Text);
-                double nuevoCosto = p.StockFaltante * p.PrecioBase;
+                double nuevoCosto = double.Parse(String.Format("{0:0.##}", p.StockFaltante * p.PrecioBase));
                 p.Costo = nuevoCosto;
                 double cambio = nuevoCosto - viejoCosto;
                 costoFinal += cambio;
