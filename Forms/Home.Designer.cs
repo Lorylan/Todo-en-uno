@@ -52,6 +52,7 @@ namespace Todo_en_uno
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelVentas = new System.Windows.Forms.Label();
+            this.btn_sim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -82,7 +83,7 @@ namespace Todo_en_uno
             this.splitContainer2.Panel2.Controls.Add(this.panel3);
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
             this.splitContainer2.Panel2.Controls.Add(this.panel1);
-            this.splitContainer2.Size = new System.Drawing.Size(338, 443);
+            this.splitContainer2.Size = new System.Drawing.Size(338, 486);
             this.splitContainer2.SplitterDistance = 67;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 23;
@@ -105,6 +106,7 @@ namespace Todo_en_uno
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel3.Controls.Add(this.btn_sim);
             this.panel3.Controls.Add(this.btn_ganancias);
             this.panel3.Controls.Add(this.btn_notas);
             this.panel3.Controls.Add(this.btn_inv);
@@ -114,7 +116,7 @@ namespace Todo_en_uno
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 231);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(338, 140);
+            this.panel3.Size = new System.Drawing.Size(338, 183);
             this.panel3.TabIndex = 8;
             // 
             // btn_ganancias
@@ -174,7 +176,7 @@ namespace Todo_en_uno
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 29);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(24, 111);
+            this.panel9.Size = new System.Drawing.Size(24, 154);
             this.panel9.TabIndex = 10;
             // 
             // panel8
@@ -183,7 +185,7 @@ namespace Todo_en_uno
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(318, 29);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(20, 111);
+            this.panel8.Size = new System.Drawing.Size(20, 154);
             this.panel8.TabIndex = 9;
             // 
             // label2
@@ -367,12 +369,29 @@ namespace Todo_en_uno
             this.labelVentas.Text = "Ventas";
             this.labelVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btn_sim
+            // 
+            this.btn_sim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btn_sim.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btn_sim.FlatAppearance.BorderSize = 0;
+            this.btn_sim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_sim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sim.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.btn_sim.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_sim.Location = new System.Drawing.Point(24, 143);
+            this.btn_sim.Name = "btn_sim";
+            this.btn_sim.Size = new System.Drawing.Size(294, 40);
+            this.btn_sim.TabIndex = 11;
+            this.btn_sim.Text = "Simulacro";
+            this.btn_sim.UseVisualStyleBackColor = false;
+            this.btn_sim.Click += new System.EventHandler(this.btn_sim_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(338, 443);
+            this.ClientSize = new System.Drawing.Size(338, 486);
             this.Controls.Add(this.splitContainer2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -414,6 +433,7 @@ namespace Todo_en_uno
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btn_sim;
     }
 }
 

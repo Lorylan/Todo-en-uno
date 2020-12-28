@@ -59,5 +59,11 @@ namespace Todo_en_uno
             FormConfiguracion fc = new FormConfiguracion();
             fc.ShowDialog();
         }
+
+        private void btn_sim_Click(object sender, EventArgs e)
+        {
+            Simulacro sim = new Simulacro();
+            sim.ShowDialog();
+        }
     }
 }
