@@ -76,5 +76,7 @@ namespace Todo_en_uno.Forms
                 MessageBox.Show("Ingrese en mercaderia un valor válido");
             }
         }
+
+       
     }
 }
