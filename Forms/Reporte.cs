@@ -22,13 +22,13 @@ namespace Todo_en_uno.Forms
             venta = new Venta();
             Venta sumatoriaVentaPropia;
             Venta sumatoriaVenta;
-            datos_ventas.DataSource = venta.getAll();
             if (deHoy)
             {
                 sumatoriaVentaPropia = venta.getVentasHoy(true);
                 sumatoriaVenta = venta.getVentasHoy(false);
             }
             else {
+                label1.Text = "Reporte mensual";
                 sumatoriaVentaPropia = venta.getVentasMes(true);
                 sumatoriaVenta = venta.getVentasMes(false);
             }
@@ -39,13 +39,10 @@ namespace Todo_en_uno.Forms
             txt_pago_m.Text = sumatoriaVentaPropia.PrecioTotal.ToString();
             txt_pago_c.Text = sumatoriaVentaPropia.PrecioTotalCigarrillo.ToString();
             txt_reponer_c.Text = (Convert.ToDouble(txt_venta_c.Text) - Convert.ToDouble(txt_ganancia_c.Text)).ToString();
-            datos_ventas.Columns[0].HeaderText = "Precio total mercaderia";
-            datos_ventas.Columns[1].HeaderText = "Precio total cigarrillo";
-            datos_ventas.Columns[2].HeaderText = "Cant. Cigarrillo";
-            datos_ventas.Columns[3].Visible = false;
-            datos_ventas.Columns[4].HeaderText = "Fecha";
-            datos_ventas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            
 
         }
+
+        
     }
 }

@@ -60,7 +60,7 @@
             this.Titulo.Location = new System.Drawing.Point(207, 9);
             this.Titulo.Name = "Titulo";
             this.Titulo.Size = new System.Drawing.Size(204, 39);
-            this.Titulo.TabIndex = 0;
+ 
             this.Titulo.Text = "Nueva venta";
             // 
             // txt_codigo
@@ -70,7 +70,7 @@
             this.txt_codigo.Location = new System.Drawing.Point(71, 98);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(186, 30);
-            this.txt_codigo.TabIndex = 1;
+
             this.txt_codigo.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
             // 
             // label1
@@ -80,7 +80,7 @@
             this.label1.Location = new System.Drawing.Point(83, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 25);
-            this.label1.TabIndex = 2;
+     
             this.label1.Text = "Codigo de barra";
             // 
             // cant
@@ -90,7 +90,7 @@
             this.cant.Location = new System.Drawing.Point(296, 70);
             this.cant.Name = "cant";
             this.cant.Size = new System.Drawing.Size(96, 25);
-            this.cant.TabIndex = 4;
+        
             this.cant.Text = "Cantidad";
             // 
             // txt_cant
@@ -100,7 +100,7 @@
             this.txt_cant.Location = new System.Drawing.Point(322, 99);
             this.txt_cant.Name = "txt_cant";
             this.txt_cant.Size = new System.Drawing.Size(58, 30);
-            this.txt_cant.TabIndex = 3;
+   
             this.txt_cant.Text = "1";
             // 
             // datos_venta
