@@ -29,27 +29,24 @@ namespace Todo_en_uno.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.Titulo = new System.Windows.Forms.Label();
             this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.btn_sim = new System.Windows.Forms.Button();
             this.BtnFiltrar = new System.Windows.Forms.Button();
-            this.CodigoProducto = new System.Windows.Forms.Label();
-            this.NombreProducto = new System.Windows.Forms.Label();
-            this.CheckStock = new System.Windows.Forms.CheckBox();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
+            this.CheckStock = new System.Windows.Forms.CheckBox();
+            this.CodigoProducto = new System.Windows.Forms.Label();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.NombreProducto = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,180 +54,199 @@ namespace Todo_en_uno.Forms
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.splitContainer1.Panel1.Controls.Add(this.Titulo);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnEditar);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnFiltrar);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnEliminar);
+            this.splitContainer1.Panel1.Controls.Add(this.TxtCodigo);
+            this.splitContainer1.Panel1.Controls.Add(this.CheckStock);
+            this.splitContainer1.Panel1.Controls.Add(this.CodigoProducto);
+            this.splitContainer1.Panel1.Controls.Add(this.BtnAgregar);
+            this.splitContainer1.Panel1.Controls.Add(this.NombreProducto);
+            this.splitContainer1.Panel1.Controls.Add(this.TxtNombre);
+            this.splitContainer1.Panel1.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(990, 449);
-            this.splitContainer1.SplitterDistance = 86;
+            this.splitContainer1.Size = new System.Drawing.Size(807, 434);
+            this.splitContainer1.SplitterDistance = 130;
             this.splitContainer1.TabIndex = 0;
             // 
-            // splitContainer2
+            // Titulo
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.IsSplitterFixed = true;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.BtnEliminar);
-            this.splitContainer2.Panel1.Controls.Add(this.BtnEditar);
-            this.splitContainer2.Panel1.Controls.Add(this.BtnAgregar);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.btn_sim);
-            this.splitContainer2.Panel2.Controls.Add(this.BtnFiltrar);
-            this.splitContainer2.Panel2.Controls.Add(this.CodigoProducto);
-            this.splitContainer2.Panel2.Controls.Add(this.NombreProducto);
-            this.splitContainer2.Panel2.Controls.Add(this.CheckStock);
-            this.splitContainer2.Panel2.Controls.Add(this.TxtCodigo);
-            this.splitContainer2.Panel2.Controls.Add(this.TxtNombre);
-            this.splitContainer2.Size = new System.Drawing.Size(990, 86);
-            this.splitContainer2.SplitterDistance = 490;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.AutoEllipsis = true;
-            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnEliminar.Location = new System.Drawing.Point(262, 12);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(119, 57);
-            this.BtnEliminar.TabIndex = 2;
-            this.BtnEliminar.Text = "Eliminar Producto";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            this.Titulo.AutoSize = true;
+            this.Titulo.Font = new System.Drawing.Font("Ink Free", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.Titulo.Location = new System.Drawing.Point(99, 13);
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Size = new System.Drawing.Size(192, 43);
+            this.Titulo.TabIndex = 22;
+            this.Titulo.Text = "Inventario";
             // 
             // BtnEditar
             // 
             this.BtnEditar.AutoEllipsis = true;
+            this.BtnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.BtnEditar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnEditar.Location = new System.Drawing.Point(137, 12);
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditar.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.BtnEditar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.BtnEditar.Location = new System.Drawing.Point(137, 73);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(119, 57);
+            this.BtnEditar.Size = new System.Drawing.Size(108, 41);
             this.BtnEditar.TabIndex = 1;
-            this.BtnEditar.Text = "Editar Producto";
-            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.AutoEllipsis = true;
-            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.BtnAgregar.Location = new System.Drawing.Point(12, 12);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(119, 57);
-            this.BtnAgregar.TabIndex = 0;
-            this.BtnAgregar.Text = "Agregar Producto";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // btn_sim
-            // 
-            this.btn_sim.Location = new System.Drawing.Point(368, 17);
-            this.btn_sim.Name = "btn_sim";
-            this.btn_sim.Size = new System.Drawing.Size(99, 38);
-            this.btn_sim.TabIndex = 6;
-            this.btn_sim.Text = "Simulacro";
-            this.btn_sim.UseVisualStyleBackColor = true;
-            this.btn_sim.Click += new System.EventHandler(this.btn_sim_Click);
             // 
             // BtnFiltrar
             // 
-            this.BtnFiltrar.Location = new System.Drawing.Point(252, 21);
+            this.BtnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.BtnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFiltrar.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.BtnFiltrar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.BtnFiltrar.Location = new System.Drawing.Point(682, 46);
             this.BtnFiltrar.Name = "BtnFiltrar";
-            this.BtnFiltrar.Size = new System.Drawing.Size(86, 30);
+            this.BtnFiltrar.Size = new System.Drawing.Size(86, 40);
             this.BtnFiltrar.TabIndex = 5;
             this.BtnFiltrar.Text = "Limpiar Filtros";
-            this.BtnFiltrar.UseVisualStyleBackColor = true;
+            this.BtnFiltrar.UseVisualStyleBackColor = false;
             this.BtnFiltrar.Click += new System.EventHandler(this.BtnFiltrar_Click);
             // 
-            // CodigoProducto
+            // BtnEliminar
             // 
-            this.CodigoProducto.AutoSize = true;
-            this.CodigoProducto.Location = new System.Drawing.Point(136, 15);
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.Size = new System.Drawing.Size(100, 13);
-            this.CodigoProducto.TabIndex = 4;
-            this.CodigoProducto.Text = "Codigo de producto";
+            this.BtnEliminar.AutoEllipsis = true;
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.BtnEliminar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.BtnEliminar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.BtnEliminar.Location = new System.Drawing.Point(251, 74);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(109, 40);
+            this.BtnEliminar.TabIndex = 2;
+            this.BtnEliminar.Text = "Eliminar ";
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // NombreProducto
+            // TxtCodigo
             // 
-            this.NombreProducto.AutoSize = true;
-            this.NombreProducto.Location = new System.Drawing.Point(14, 15);
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.Size = new System.Drawing.Size(104, 13);
-            this.NombreProducto.TabIndex = 3;
-            this.NombreProducto.Text = "Nombre de producto";
+            this.TxtCodigo.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigo.Location = new System.Drawing.Point(417, 54);
+            this.TxtCodigo.Name = "TxtCodigo";
+            this.TxtCodigo.Size = new System.Drawing.Size(100, 27);
+            this.TxtCodigo.TabIndex = 1;
+            this.TxtCodigo.TextChanged += new System.EventHandler(this.Filtrar);
             // 
             // CheckStock
             // 
             this.CheckStock.AutoSize = true;
-            this.CheckStock.Location = new System.Drawing.Point(88, 57);
+            this.CheckStock.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.CheckStock.Location = new System.Drawing.Point(476, 87);
             this.CheckStock.Name = "CheckStock";
-            this.CheckStock.Size = new System.Drawing.Size(82, 17);
+            this.CheckStock.Size = new System.Drawing.Size(121, 27);
             this.CheckStock.TabIndex = 2;
             this.CheckStock.Text = "Poco Stock";
             this.CheckStock.UseVisualStyleBackColor = true;
             this.CheckStock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Filtrar);
             // 
-            // TxtCodigo
+            // CodigoProducto
             // 
-            this.TxtCodigo.Location = new System.Drawing.Point(136, 31);
-            this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.TxtCodigo.TabIndex = 1;
-            this.TxtCodigo.TextChanged += new System.EventHandler(this.Filtrar);
+            this.CodigoProducto.AutoSize = true;
+            this.CodigoProducto.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodigoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.CodigoProducto.Location = new System.Drawing.Point(431, 28);
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.Size = new System.Drawing.Size(65, 23);
+            this.CodigoProducto.TabIndex = 4;
+            this.CodigoProducto.Text = "Codigo";
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.AutoEllipsis = true;
+            this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.BtnAgregar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregar.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.BtnAgregar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.BtnAgregar.Location = new System.Drawing.Point(22, 74);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(109, 41);
+            this.BtnAgregar.TabIndex = 0;
+            this.BtnAgregar.Text = "Agregar ";
+            this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.AutoSize = true;
+            this.NombreProducto.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.NombreProducto.Location = new System.Drawing.Point(545, 28);
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.Size = new System.Drawing.Size(78, 23);
+            this.NombreProducto.TabIndex = 3;
+            this.NombreProducto.Text = "Nombre";
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(17, 31);
+            this.TxtNombre.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(537, 54);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(100, 20);
+            this.TxtNombre.Size = new System.Drawing.Size(100, 27);
             this.TxtNombre.TabIndex = 0;
             this.TxtNombre.TextChanged += new System.EventHandler(this.Filtrar);
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MV Boli", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 359);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(807, 300);
+            this.dataGridView1.TabIndex = 1;
             // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 449);
+            this.ClientSize = new System.Drawing.Size(807, 434);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.Inventario_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -239,7 +255,6 @@ namespace Todo_en_uno.Forms
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnAgregar;
@@ -249,7 +264,7 @@ namespace Todo_en_uno.Forms
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button BtnFiltrar;
         private System.Windows.Forms.Label CodigoProducto;
+        private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_sim;
     }
 }

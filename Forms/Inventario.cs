@@ -18,23 +18,25 @@ namespace Todo_en_uno.Forms
         public Inventario()
         {
             InitializeComponent();
-        }
-
-        private void Inventario_Load(object sender, EventArgs e)
-        {
             Refrescar();
         }
+
+        
+        
 
         private void Refrescar()
         {
             dataGridView1.DataSource = Producto.GetProductos();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[2].HeaderText = "Precio base";
             dataGridView1.Columns[3].HeaderText = "Precio venta";
             dataGridView1.Columns[4].HeaderText = "Stock actual";
+            dataGridView1.Columns[4].Width = 50;
             dataGridView1.Columns[5].HeaderText = "Stock minimo";
+            dataGridView1.Columns[5].Width = 25;
             dataGridView1.Columns[7].HeaderText = "Es cigarrillo";
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.Columns[7].Width = 25;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
@@ -104,5 +106,7 @@ namespace Todo_en_uno.Forms
             Simulacro sim = new Simulacro();
             sim.ShowDialog();
         }
+
+        
     }
 }
