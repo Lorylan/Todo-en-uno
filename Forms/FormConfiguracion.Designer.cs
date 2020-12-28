@@ -65,11 +65,11 @@ namespace Todo_en_uno.Forms
             this.btn_guardar.FlatAppearance.BorderSize = 0;
             this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_guardar.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_guardar.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btn_guardar.Location = new System.Drawing.Point(103, 343);
+            this.btn_guardar.Location = new System.Drawing.Point(97, 343);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(170, 43);
+            this.btn_guardar.Size = new System.Drawing.Size(184, 60);
             this.btn_guardar.TabIndex = 5;
             this.btn_guardar.Text = "Guardar cambios";
             this.btn_guardar.UseVisualStyleBackColor = false;

@@ -41,5 +41,13 @@ namespace Todo_en_uno.Clases
                 return resul;
             }
         }
+
+        public static void DeleteProducto(int id)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                db.GetCollection<Producto>("productos").Delete(id);
+            }
+        }
     }
 }

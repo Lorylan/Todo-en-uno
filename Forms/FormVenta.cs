@@ -198,8 +198,8 @@ namespace Todo_en_uno.Forms
             if (btn_eliminar.BackColor != Color.DimGray) {
                 int i = datos_venta.CurrentRow.Index;
                 int id = Convert.ToInt32(datos_venta.Rows[i].Cells["Id"].Value.ToString());
-                var result = MessageBox.Show("¿Estas seguro que queres borrar esta orden?", "Borrar Orden", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                var result = new Borrado("¿Estas seguro que queres borrar esta orden?").ShowDialog();
+                if (result == DialogResult.OK)
                 {
                     orden.elimanar(id);
                     datos_venta.DataSource = orden.getAll(esVentaPropia);

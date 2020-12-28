@@ -56,8 +56,8 @@ namespace Todo_en_uno.Forms
             int? id = TomarId();
             if (id != null)
             {
-                var result = MessageBox.Show("¿Estas seguro que queres borrar esta nota?", "Borrar Nota", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                var result = new Borrado("¿Estas seguro que queres borrar esta nota?").ShowDialog();
+                if (result == DialogResult.OK)
                 {
                     using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
                     {

@@ -76,13 +76,10 @@ namespace Todo_en_uno.Forms
             int? id = TomarId();
             if (id != null)
             {
-                var result = MessageBox.Show("¿Estas seguro que queres borrar este producto?", "Borrar Producto", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes)
+                var result = new Borrado("¿Estas seguro que queres borrar este producto?").ShowDialog();
+                if(result == DialogResult.OK)
                 {
-                    using(var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
-                    {
-                        db.GetCollection<Producto>("productos").Delete(id);
-                    }
+                    Producto.DeleteProducto((int)id);
                 }
             }
             Refrescar();
@@ -100,13 +97,6 @@ namespace Todo_en_uno.Forms
             CheckStock.Checked = false;
             Filtrar(sender, e);
         }
-
-        private void btn_sim_Click(object sender, EventArgs e)
-        {
-            Simulacro sim = new Simulacro();
-            sim.ShowDialog();
-        }
-
         
     }
 }

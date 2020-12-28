@@ -112,7 +112,7 @@ namespace Todo_en_uno.Forms
             this.btn_eliminar.FlatAppearance.BorderSize = 0;
             this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminar.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.btn_eliminar.Location = new System.Drawing.Point(149, 69);
             this.btn_eliminar.Name = "btn_eliminar";
@@ -129,7 +129,7 @@ namespace Todo_en_uno.Forms
             this.btn_nuevo.FlatAppearance.BorderSize = 0;
             this.btn_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nuevo.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nuevo.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nuevo.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.btn_nuevo.Location = new System.Drawing.Point(12, 69);
             this.btn_nuevo.Name = "btn_nuevo";
@@ -182,6 +182,7 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridView1.Location = new System.Drawing.Point(15, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(261, 201);
             this.dataGridView1.TabIndex = 0;
@@ -194,7 +195,7 @@ namespace Todo_en_uno.Forms
             this.btn_deshacer.FlatAppearance.BorderSize = 0;
             this.btn_deshacer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_deshacer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_deshacer.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_deshacer.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deshacer.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.btn_deshacer.Location = new System.Drawing.Point(156, 305);
             this.btn_deshacer.Name = "btn_deshacer";
@@ -220,7 +221,7 @@ namespace Todo_en_uno.Forms
             this.btn_editar.FlatAppearance.BorderSize = 0;
             this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_editar.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_editar.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.btn_editar.Location = new System.Drawing.Point(40, 305);
             this.btn_editar.Name = "btn_editar";
