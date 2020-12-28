@@ -56,10 +56,11 @@ namespace Todo_en_uno.Forms
 
                             };
                             preferencia.Editar(preferecia_aux);
+                            Close();
                         }
                         catch
                         {
-                            MessageBox.Show("Ingrese en cigrrillo un valor válido");
+                            MessageBox.Show("Ingrese en cigarrillo un valor válido");
                         }
                     }
                     catch

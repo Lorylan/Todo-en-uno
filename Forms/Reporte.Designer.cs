@@ -41,41 +41,41 @@ namespace Todo_en_uno.Forms
             this.label8 = new System.Windows.Forms.Label();
             this.cigarrillo_reponer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_venta_m = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txt_venta_c = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txt_ganancia_m = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.txt_ganancia_c = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.cigarrillo_ganancia = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.mercaderia_ganancia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txt_pago_m = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txt_pago_c = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txt_venta_m = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txt_venta_c = new System.Windows.Forms.Label();
-            this.txt_pago_c = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txt_pago_m = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txt_ganancia_c = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.txt_ganancia_m = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txt_reponer_c = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,9 +88,9 @@ namespace Todo_en_uno.Forms
             this.label1.Location = new System.Drawing.Point(137, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 39);
+            this.label1.Size = new System.Drawing.Size(229, 39);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Reporte diario";
+            this.label1.Text = "Reporte Diario";
             // 
             // label5
             // 
@@ -229,6 +229,42 @@ namespace Todo_en_uno.Forms
             this.panel1.Size = new System.Drawing.Size(236, 99);
             this.panel1.TabIndex = 4;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.txt_venta_m);
+            this.panel5.Location = new System.Drawing.Point(132, 67);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(84, 23);
+            this.panel5.TabIndex = 5;
+            // 
+            // txt_venta_m
+            // 
+            this.txt_venta_m.AutoSize = true;
+            this.txt_venta_m.Location = new System.Drawing.Point(3, 2);
+            this.txt_venta_m.Name = "txt_venta_m";
+            this.txt_venta_m.Size = new System.Drawing.Size(16, 18);
+            this.txt_venta_m.TabIndex = 0;
+            this.txt_venta_m.Text = "0";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.txt_venta_c);
+            this.panel6.Location = new System.Drawing.Point(132, 37);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(84, 23);
+            this.panel6.TabIndex = 5;
+            // 
+            // txt_venta_c
+            // 
+            this.txt_venta_c.AutoSize = true;
+            this.txt_venta_c.Location = new System.Drawing.Point(3, 2);
+            this.txt_venta_c.Name = "txt_venta_c";
+            this.txt_venta_c.Size = new System.Drawing.Size(16, 18);
+            this.txt_venta_c.TabIndex = 0;
+            this.txt_venta_c.Text = "0";
+            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -258,6 +294,42 @@ namespace Todo_en_uno.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 99);
             this.panel2.TabIndex = 3;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.txt_ganancia_m);
+            this.panel10.Location = new System.Drawing.Point(136, 65);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(84, 23);
+            this.panel10.TabIndex = 8;
+            // 
+            // txt_ganancia_m
+            // 
+            this.txt_ganancia_m.AutoSize = true;
+            this.txt_ganancia_m.Location = new System.Drawing.Point(6, 2);
+            this.txt_ganancia_m.Name = "txt_ganancia_m";
+            this.txt_ganancia_m.Size = new System.Drawing.Size(16, 18);
+            this.txt_ganancia_m.TabIndex = 0;
+            this.txt_ganancia_m.Text = "0";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.txt_ganancia_c);
+            this.panel9.Location = new System.Drawing.Point(136, 38);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(84, 23);
+            this.panel9.TabIndex = 7;
+            // 
+            // txt_ganancia_c
+            // 
+            this.txt_ganancia_c.AutoSize = true;
+            this.txt_ganancia_c.Location = new System.Drawing.Point(6, 2);
+            this.txt_ganancia_c.Name = "txt_ganancia_c";
+            this.txt_ganancia_c.Size = new System.Drawing.Size(16, 18);
+            this.txt_ganancia_c.TabIndex = 0;
+            this.txt_ganancia_c.Text = "0";
             // 
             // label10
             // 
@@ -337,6 +409,42 @@ namespace Todo_en_uno.Forms
             this.panel3.Size = new System.Drawing.Size(236, 99);
             this.panel3.TabIndex = 2;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.txt_pago_m);
+            this.panel8.Location = new System.Drawing.Point(132, 66);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(84, 23);
+            this.panel8.TabIndex = 7;
+            // 
+            // txt_pago_m
+            // 
+            this.txt_pago_m.AutoSize = true;
+            this.txt_pago_m.Location = new System.Drawing.Point(3, 2);
+            this.txt_pago_m.Name = "txt_pago_m";
+            this.txt_pago_m.Size = new System.Drawing.Size(16, 18);
+            this.txt_pago_m.TabIndex = 0;
+            this.txt_pago_m.Text = "0";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.txt_pago_c);
+            this.panel7.Location = new System.Drawing.Point(132, 36);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(84, 23);
+            this.panel7.TabIndex = 6;
+            // 
+            // txt_pago_c
+            // 
+            this.txt_pago_c.AutoSize = true;
+            this.txt_pago_c.Location = new System.Drawing.Point(3, 2);
+            this.txt_pago_c.Name = "txt_pago_c";
+            this.txt_pago_c.Size = new System.Drawing.Size(16, 18);
+            this.txt_pago_c.TabIndex = 0;
+            this.txt_pago_c.Text = "0";
+            // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -364,127 +472,6 @@ namespace Todo_en_uno.Forms
             this.panel4.Size = new System.Drawing.Size(236, 72);
             this.panel4.TabIndex = 1;
             // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(234, 30);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Reponer";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.txt_venta_m);
-            this.panel5.Location = new System.Drawing.Point(132, 67);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(84, 23);
-            this.panel5.TabIndex = 5;
-            // 
-            // txt_venta_m
-            // 
-            this.txt_venta_m.AutoSize = true;
-            this.txt_venta_m.Location = new System.Drawing.Point(3, 2);
-            this.txt_venta_m.Name = "txt_venta_m";
-            this.txt_venta_m.Size = new System.Drawing.Size(16, 18);
-            this.txt_venta_m.TabIndex = 0;
-            this.txt_venta_m.Text = "0";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.txt_venta_c);
-            this.panel6.Location = new System.Drawing.Point(132, 37);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(84, 23);
-            this.panel6.TabIndex = 5;
-            // 
-            // txt_venta_c
-            // 
-            this.txt_venta_c.AutoSize = true;
-            this.txt_venta_c.Location = new System.Drawing.Point(3, 2);
-            this.txt_venta_c.Name = "txt_venta_c";
-            this.txt_venta_c.Size = new System.Drawing.Size(16, 18);
-            this.txt_venta_c.TabIndex = 0;
-            this.txt_venta_c.Text = "0";
-            // 
-            // txt_pago_c
-            // 
-            this.txt_pago_c.AutoSize = true;
-            this.txt_pago_c.Location = new System.Drawing.Point(3, 2);
-            this.txt_pago_c.Name = "txt_pago_c";
-            this.txt_pago_c.Size = new System.Drawing.Size(16, 18);
-            this.txt_pago_c.TabIndex = 0;
-            this.txt_pago_c.Text = "0";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.txt_pago_c);
-            this.panel7.Location = new System.Drawing.Point(132, 36);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(84, 23);
-            this.panel7.TabIndex = 6;
-            // 
-            // txt_pago_m
-            // 
-            this.txt_pago_m.AutoSize = true;
-            this.txt_pago_m.Location = new System.Drawing.Point(3, 2);
-            this.txt_pago_m.Name = "txt_pago_m";
-            this.txt_pago_m.Size = new System.Drawing.Size(16, 18);
-            this.txt_pago_m.TabIndex = 0;
-            this.txt_pago_m.Text = "0";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.txt_pago_m);
-            this.panel8.Location = new System.Drawing.Point(132, 66);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(84, 23);
-            this.panel8.TabIndex = 7;
-            // 
-            // txt_ganancia_c
-            // 
-            this.txt_ganancia_c.AutoSize = true;
-            this.txt_ganancia_c.Location = new System.Drawing.Point(6, 2);
-            this.txt_ganancia_c.Name = "txt_ganancia_c";
-            this.txt_ganancia_c.Size = new System.Drawing.Size(16, 18);
-            this.txt_ganancia_c.TabIndex = 0;
-            this.txt_ganancia_c.Text = "0";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Controls.Add(this.txt_ganancia_c);
-            this.panel9.Location = new System.Drawing.Point(136, 38);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(84, 23);
-            this.panel9.TabIndex = 7;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Controls.Add(this.txt_ganancia_m);
-            this.panel10.Location = new System.Drawing.Point(136, 65);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(84, 23);
-            this.panel10.TabIndex = 8;
-            // 
-            // txt_ganancia_m
-            // 
-            this.txt_ganancia_m.AutoSize = true;
-            this.txt_ganancia_m.Location = new System.Drawing.Point(6, 2);
-            this.txt_ganancia_m.Name = "txt_ganancia_m";
-            this.txt_ganancia_m.Size = new System.Drawing.Size(16, 18);
-            this.txt_ganancia_m.TabIndex = 0;
-            this.txt_ganancia_m.Text = "0";
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
@@ -502,6 +489,19 @@ namespace Todo_en_uno.Forms
             this.txt_reponer_c.Size = new System.Drawing.Size(16, 18);
             this.txt_reponer_c.TabIndex = 0;
             this.txt_reponer_c.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(234, 30);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Reponer";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Reporte
             // 
@@ -523,24 +523,24 @@ namespace Todo_en_uno.Forms
             this.Load += new System.EventHandler(this.Reporte_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.ResumeLayout(false);

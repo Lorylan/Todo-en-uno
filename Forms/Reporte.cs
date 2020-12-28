@@ -26,9 +26,11 @@ namespace Todo_en_uno.Forms
             {
                 sumatoriaVentaPropia = venta.getVentasHoy(true);
                 sumatoriaVenta = venta.getVentasHoy(false);
+                this.Text = "Reporte Diario";
             }
             else {
-                label1.Text = "Reporte mensual";
+                label1.Text = "Reporte Mensual";
+                this.Text = "Reporte Mensual";
                 sumatoriaVentaPropia = venta.getVentasMes(true);
                 sumatoriaVenta = venta.getVentasMes(false);
             }
