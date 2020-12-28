@@ -22,12 +22,19 @@ namespace Todo_en_uno.Clases
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
-                var preferencia_aux = preferencias.Query().First();
-                preferencia_aux.Ganancia = preferencia.Ganancia;
-                preferencia_aux.GananciaCigarrillo = preferencia.GananciaCigarrillo;
-                preferencia_aux.GananciaCredito = preferencia.GananciaCredito;
-                preferencia_aux.GananciaDebito = preferencia.GananciaDebito;
-                preferencias.Update(preferencia_aux);
+                try
+                {
+                    var preferencia_aux = preferencias.Query().First();
+                    preferencia_aux.Ganancia = preferencia.Ganancia;
+                    preferencia_aux.GananciaCigarrillo = preferencia.GananciaCigarrillo;
+                    preferencia_aux.GananciaCredito = preferencia.GananciaCredito;
+                    preferencia_aux.GananciaDebito = preferencia.GananciaDebito;
+                    preferencias.Update(preferencia_aux);
+                }
+                catch {
+                    preferencias.Insert(preferencia);
+                }
+                
             }
         }
 
@@ -35,7 +42,15 @@ namespace Todo_en_uno.Clases
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var preferencias = db.GetCollection<Preferencia>("preferencias");
-                return preferencias.Query().First() != null;
+                try
+                {
+                    preferencias.Query().First();
+                    return true;
+                }
+                catch {
+                    return false;
+                }
+               
             }
         }
 

@@ -8,14 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Todo_en_uno.Forms;
+using Todo_en_uno.Clases;
 
 namespace Todo_en_uno
 {
     public partial class Home : Form
     {
+        Preferencia preferencia;
         public Home()
         {
             InitializeComponent();
+            preferencia = new Preferencia();
+            if (!preferencia.existePteferencia()) {
+                FormConfiguracion fc = new FormConfiguracion();
+                fc.ShowDialog();
+            }
+
         }
 
         private void btn_venta_Click(object sender, EventArgs e)
