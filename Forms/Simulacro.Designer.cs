@@ -73,6 +73,7 @@ namespace Todo_en_uno.Forms
             // btn_mod
             // 
             this.btn_mod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btn_mod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_mod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mod.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mod.ForeColor = System.Drawing.Color.LightSkyBlue;
@@ -86,9 +87,10 @@ namespace Todo_en_uno.Forms
             // 
             // TxtCant
             // 
-            this.TxtCant.Location = new System.Drawing.Point(244, 113);
+            this.TxtCant.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCant.Location = new System.Drawing.Point(244, 108);
             this.TxtCant.Name = "TxtCant";
-            this.TxtCant.Size = new System.Drawing.Size(77, 20);
+            this.TxtCant.Size = new System.Drawing.Size(77, 30);
             this.TxtCant.TabIndex = 5;
             // 
             // label3
@@ -150,7 +152,7 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;

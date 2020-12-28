@@ -124,38 +124,38 @@ namespace Todo_en_uno.Forms
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombre.Location = new System.Drawing.Point(83, 114);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(241, 28);
+            this.TxtNombre.Size = new System.Drawing.Size(241, 30);
             this.TxtNombre.TabIndex = 7;
             // 
             // TxtPCaja
             // 
-            this.TxtPCaja.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPCaja.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPCaja.Location = new System.Drawing.Point(83, 246);
             this.TxtPCaja.Name = "TxtPCaja";
-            this.TxtPCaja.Size = new System.Drawing.Size(108, 28);
+            this.TxtPCaja.Size = new System.Drawing.Size(108, 30);
             this.TxtPCaja.TabIndex = 8;
             this.TxtPCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtPCaja.TextChanged += new System.EventHandler(this.TxtPCaja_TextChanged);
             // 
             // TxtUnidades
             // 
-            this.TxtUnidades.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUnidades.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUnidades.Location = new System.Drawing.Point(229, 243);
             this.TxtUnidades.Name = "TxtUnidades";
-            this.TxtUnidades.Size = new System.Drawing.Size(108, 28);
+            this.TxtUnidades.Size = new System.Drawing.Size(108, 30);
             this.TxtUnidades.TabIndex = 9;
             this.TxtUnidades.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtUnidades.TextChanged += new System.EventHandler(this.TxtPCaja_TextChanged);
             // 
             // TxtPVenta
             // 
-            this.TxtPVenta.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPVenta.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPVenta.Location = new System.Drawing.Point(150, 444);
             this.TxtPVenta.Name = "TxtPVenta";
-            this.TxtPVenta.Size = new System.Drawing.Size(133, 28);
+            this.TxtPVenta.Size = new System.Drawing.Size(133, 30);
             this.TxtPVenta.TabIndex = 10;
             this.TxtPVenta.Text = "0";
             this.TxtPVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -173,6 +173,7 @@ namespace Todo_en_uno.Forms
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("MV Boli", 14.25F);
             this.button1.ForeColor = System.Drawing.Color.LightSkyBlue;
@@ -206,20 +207,20 @@ namespace Todo_en_uno.Forms
             // 
             // TxtStock
             // 
-            this.TxtStock.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStock.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStock.Location = new System.Drawing.Point(100, 341);
             this.TxtStock.Name = "TxtStock";
-            this.TxtStock.Size = new System.Drawing.Size(71, 28);
+            this.TxtStock.Size = new System.Drawing.Size(71, 30);
             this.TxtStock.TabIndex = 16;
             this.TxtStock.Text = "0";
             this.TxtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtStockMin
             // 
-            this.TxtStockMin.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStockMin.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStockMin.Location = new System.Drawing.Point(258, 341);
             this.TxtStockMin.Name = "TxtStockMin";
-            this.TxtStockMin.Size = new System.Drawing.Size(66, 28);
+            this.TxtStockMin.Size = new System.Drawing.Size(66, 30);
             this.TxtStockMin.TabIndex = 17;
             this.TxtStockMin.Text = "0";
             this.TxtStockMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -236,10 +237,10 @@ namespace Todo_en_uno.Forms
             // 
             // TxtCodigo
             // 
-            this.TxtCodigo.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigo.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodigo.Location = new System.Drawing.Point(83, 176);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(241, 28);
+            this.TxtCodigo.Size = new System.Drawing.Size(241, 30);
             this.TxtCodigo.TabIndex = 19;
             // 
             // label6

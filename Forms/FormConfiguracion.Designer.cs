@@ -32,6 +32,10 @@ namespace Todo_en_uno.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txt_credito = new System.Windows.Forms.TextBox();
             this.txt_debito = new System.Windows.Forms.TextBox();
             this.txt_cigarrillo = new System.Windows.Forms.TextBox();
@@ -41,10 +45,6 @@ namespace Todo_en_uno.Forms
             this.cigarrillo = new System.Windows.Forms.Label();
             this.mercaderia = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@ namespace Todo_en_uno.Forms
             // 
             this.btn_guardar.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
@@ -97,32 +98,80 @@ namespace Todo_en_uno.Forms
             this.panel1.Size = new System.Drawing.Size(334, 219);
             this.panel1.TabIndex = 7;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.label6.Location = new System.Drawing.Point(139, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 26);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "$";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.label5.Location = new System.Drawing.Point(139, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 26);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "%";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.label4.Location = new System.Drawing.Point(139, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(28, 26);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "%";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.label3.Location = new System.Drawing.Point(139, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 26);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "%";
+            // 
             // txt_credito
             // 
+            this.txt_credito.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_credito.Location = new System.Drawing.Point(186, 171);
             this.txt_credito.Name = "txt_credito";
-            this.txt_credito.Size = new System.Drawing.Size(114, 31);
+            this.txt_credito.Size = new System.Drawing.Size(114, 30);
             this.txt_credito.TabIndex = 22;
             // 
             // txt_debito
             // 
+            this.txt_debito.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_debito.Location = new System.Drawing.Point(186, 130);
             this.txt_debito.Name = "txt_debito";
-            this.txt_debito.Size = new System.Drawing.Size(114, 31);
+            this.txt_debito.Size = new System.Drawing.Size(114, 30);
             this.txt_debito.TabIndex = 21;
             // 
             // txt_cigarrillo
             // 
+            this.txt_cigarrillo.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cigarrillo.Location = new System.Drawing.Point(186, 86);
             this.txt_cigarrillo.Name = "txt_cigarrillo";
-            this.txt_cigarrillo.Size = new System.Drawing.Size(114, 31);
+            this.txt_cigarrillo.Size = new System.Drawing.Size(114, 30);
             this.txt_cigarrillo.TabIndex = 20;
             // 
             // txt_mercaderia
             // 
+            this.txt_mercaderia.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mercaderia.Location = new System.Drawing.Point(186, 43);
             this.txt_mercaderia.Name = "txt_mercaderia";
-            this.txt_mercaderia.Size = new System.Drawing.Size(114, 31);
+            this.txt_mercaderia.Size = new System.Drawing.Size(114, 30);
             this.txt_mercaderia.TabIndex = 19;
             // 
             // credito
@@ -183,50 +232,6 @@ namespace Todo_en_uno.Forms
             this.label2.TabIndex = 0;
             this.label2.Text = "Ganancia";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.label3.Location = new System.Drawing.Point(139, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 26);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "%";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.label4.Location = new System.Drawing.Point(139, 127);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 26);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "%";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.label5.Location = new System.Drawing.Point(139, 174);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 26);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "%";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.label6.Location = new System.Drawing.Point(139, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 26);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "$";
             // 
             // FormConfiguracion
             // 
