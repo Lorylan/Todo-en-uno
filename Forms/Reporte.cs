@@ -43,6 +43,9 @@ namespace Todo_en_uno.Forms
 
         }
 
-        
+        private void Reporte_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

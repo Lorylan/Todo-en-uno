@@ -30,26 +30,19 @@ namespace Todo_en_uno.Forms
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_venta_m = new System.Windows.Forms.TextBox();
-            this.txt_venta_c = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cigarrillo_venta = new System.Windows.Forms.Label();
             this.mercaderia_venta = new System.Windows.Forms.Label();
-            this.txt_pago_m = new System.Windows.Forms.TextBox();
-            this.txt_pago_c = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cigarrillo_pago_n = new System.Windows.Forms.Label();
             this.mercaderia_pago_n = new System.Windows.Forms.Label();
-            this.txt_reponer_c = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cigarrillo_reponer = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_ganancia_c = new System.Windows.Forms.TextBox();
-            this.txt_ganancia_m = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cigarrillo_ganancia = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,10 +52,31 @@ namespace Todo_en_uno.Forms
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_venta_m = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txt_venta_c = new System.Windows.Forms.Label();
+            this.txt_pago_c = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txt_pago_m = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txt_ganancia_c = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.txt_ganancia_m = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.txt_reponer_c = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -77,30 +91,6 @@ namespace Todo_en_uno.Forms
             this.label1.Size = new System.Drawing.Size(223, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reporte diario";
-            // 
-            // txt_venta_m
-            // 
-            this.txt_venta_m.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.txt_venta_m.Location = new System.Drawing.Point(132, 66);
-            this.txt_venta_m.Name = "txt_venta_m";
-            this.txt_venta_m.ReadOnly = true;
-            this.txt_venta_m.Size = new System.Drawing.Size(84, 24);
-            this.txt_venta_m.TabIndex = 3;
-            this.txt_venta_m.TabStop = false;
-            this.txt_venta_m.Text = "0";
-            this.txt_venta_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_venta_c
-            // 
-            this.txt_venta_c.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.txt_venta_c.Location = new System.Drawing.Point(132, 37);
-            this.txt_venta_c.Name = "txt_venta_c";
-            this.txt_venta_c.ReadOnly = true;
-            this.txt_venta_c.Size = new System.Drawing.Size(84, 24);
-            this.txt_venta_c.TabIndex = 2;
-            this.txt_venta_c.TabStop = false;
-            this.txt_venta_c.Text = "0";
-            this.txt_venta_c.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -150,28 +140,6 @@ namespace Todo_en_uno.Forms
             this.mercaderia_venta.TabIndex = 9;
             this.mercaderia_venta.Text = "Mercaderia";
             // 
-            // txt_pago_m
-            // 
-            this.txt_pago_m.Location = new System.Drawing.Point(136, 65);
-            this.txt_pago_m.Name = "txt_pago_m";
-            this.txt_pago_m.ReadOnly = true;
-            this.txt_pago_m.Size = new System.Drawing.Size(83, 24);
-            this.txt_pago_m.TabIndex = 7;
-            this.txt_pago_m.TabStop = false;
-            this.txt_pago_m.Text = "0";
-            this.txt_pago_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_pago_c
-            // 
-            this.txt_pago_c.Location = new System.Drawing.Point(136, 38);
-            this.txt_pago_c.Name = "txt_pago_c";
-            this.txt_pago_c.ReadOnly = true;
-            this.txt_pago_c.Size = new System.Drawing.Size(83, 24);
-            this.txt_pago_c.TabIndex = 6;
-            this.txt_pago_c.TabStop = false;
-            this.txt_pago_c.Text = "0";
-            this.txt_pago_c.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -220,17 +188,6 @@ namespace Todo_en_uno.Forms
             this.mercaderia_pago_n.TabIndex = 11;
             this.mercaderia_pago_n.Text = "Mercaderia";
             // 
-            // txt_reponer_c
-            // 
-            this.txt_reponer_c.Location = new System.Drawing.Point(144, 37);
-            this.txt_reponer_c.Name = "txt_reponer_c";
-            this.txt_reponer_c.ReadOnly = true;
-            this.txt_reponer_c.Size = new System.Drawing.Size(77, 24);
-            this.txt_reponer_c.TabIndex = 50;
-            this.txt_reponer_c.TabStop = false;
-            this.txt_reponer_c.Text = "0";
-            this.txt_reponer_c.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -259,12 +216,12 @@ namespace Todo_en_uno.Forms
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.mercaderia_venta);
-            this.panel1.Controls.Add(this.txt_venta_m);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cigarrillo_venta);
-            this.panel1.Controls.Add(this.txt_venta_c);
             this.panel1.Controls.Add(this.label4);
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(13, 82);
@@ -289,8 +246,8 @@ namespace Todo_en_uno.Forms
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txt_ganancia_c);
-            this.panel2.Controls.Add(this.txt_ganancia_m);
+            this.panel2.Controls.Add(this.panel10);
+            this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.cigarrillo_ganancia);
             this.panel2.Controls.Add(this.label3);
@@ -301,28 +258,6 @@ namespace Todo_en_uno.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 99);
             this.panel2.TabIndex = 3;
-            // 
-            // txt_ganancia_c
-            // 
-            this.txt_ganancia_c.Location = new System.Drawing.Point(135, 36);
-            this.txt_ganancia_c.Name = "txt_ganancia_c";
-            this.txt_ganancia_c.ReadOnly = true;
-            this.txt_ganancia_c.Size = new System.Drawing.Size(85, 24);
-            this.txt_ganancia_c.TabIndex = 0;
-            this.txt_ganancia_c.TabStop = false;
-            this.txt_ganancia_c.Text = "0";
-            this.txt_ganancia_c.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_ganancia_m
-            // 
-            this.txt_ganancia_m.Location = new System.Drawing.Point(135, 66);
-            this.txt_ganancia_m.Name = "txt_ganancia_m";
-            this.txt_ganancia_m.ReadOnly = true;
-            this.txt_ganancia_m.Size = new System.Drawing.Size(85, 24);
-            this.txt_ganancia_m.TabIndex = 1;
-            this.txt_ganancia_m.TabStop = false;
-            this.txt_ganancia_m.Text = "0";
-            this.txt_ganancia_m.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
@@ -389,9 +324,9 @@ namespace Todo_en_uno.Forms
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.txt_pago_m);
+            this.panel3.Controls.Add(this.panel8);
+            this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.txt_pago_c);
             this.panel3.Controls.Add(this.cigarrillo_pago_n);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.mercaderia_pago_n);
@@ -419,7 +354,7 @@ namespace Todo_en_uno.Forms
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.txt_reponer_c);
+            this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.cigarrillo_reponer);
@@ -442,6 +377,132 @@ namespace Todo_en_uno.Forms
             this.label12.Text = "Reponer";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.txt_venta_m);
+            this.panel5.Location = new System.Drawing.Point(132, 67);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(84, 23);
+            this.panel5.TabIndex = 5;
+            // 
+            // txt_venta_m
+            // 
+            this.txt_venta_m.AutoSize = true;
+            this.txt_venta_m.Location = new System.Drawing.Point(3, 2);
+            this.txt_venta_m.Name = "txt_venta_m";
+            this.txt_venta_m.Size = new System.Drawing.Size(16, 18);
+            this.txt_venta_m.TabIndex = 0;
+            this.txt_venta_m.Text = "0";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.txt_venta_c);
+            this.panel6.Location = new System.Drawing.Point(132, 37);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(84, 23);
+            this.panel6.TabIndex = 5;
+            // 
+            // txt_venta_c
+            // 
+            this.txt_venta_c.AutoSize = true;
+            this.txt_venta_c.Location = new System.Drawing.Point(3, 2);
+            this.txt_venta_c.Name = "txt_venta_c";
+            this.txt_venta_c.Size = new System.Drawing.Size(16, 18);
+            this.txt_venta_c.TabIndex = 0;
+            this.txt_venta_c.Text = "0";
+            // 
+            // txt_pago_c
+            // 
+            this.txt_pago_c.AutoSize = true;
+            this.txt_pago_c.Location = new System.Drawing.Point(3, 2);
+            this.txt_pago_c.Name = "txt_pago_c";
+            this.txt_pago_c.Size = new System.Drawing.Size(16, 18);
+            this.txt_pago_c.TabIndex = 0;
+            this.txt_pago_c.Text = "0";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.txt_pago_c);
+            this.panel7.Location = new System.Drawing.Point(132, 36);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(84, 23);
+            this.panel7.TabIndex = 6;
+            // 
+            // txt_pago_m
+            // 
+            this.txt_pago_m.AutoSize = true;
+            this.txt_pago_m.Location = new System.Drawing.Point(3, 2);
+            this.txt_pago_m.Name = "txt_pago_m";
+            this.txt_pago_m.Size = new System.Drawing.Size(16, 18);
+            this.txt_pago_m.TabIndex = 0;
+            this.txt_pago_m.Text = "0";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.txt_pago_m);
+            this.panel8.Location = new System.Drawing.Point(132, 66);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(84, 23);
+            this.panel8.TabIndex = 7;
+            // 
+            // txt_ganancia_c
+            // 
+            this.txt_ganancia_c.AutoSize = true;
+            this.txt_ganancia_c.Location = new System.Drawing.Point(6, 2);
+            this.txt_ganancia_c.Name = "txt_ganancia_c";
+            this.txt_ganancia_c.Size = new System.Drawing.Size(16, 18);
+            this.txt_ganancia_c.TabIndex = 0;
+            this.txt_ganancia_c.Text = "0";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.txt_ganancia_c);
+            this.panel9.Location = new System.Drawing.Point(136, 38);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(84, 23);
+            this.panel9.TabIndex = 7;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.txt_ganancia_m);
+            this.panel10.Location = new System.Drawing.Point(136, 65);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(84, 23);
+            this.panel10.TabIndex = 8;
+            // 
+            // txt_ganancia_m
+            // 
+            this.txt_ganancia_m.AutoSize = true;
+            this.txt_ganancia_m.Location = new System.Drawing.Point(6, 2);
+            this.txt_ganancia_m.Name = "txt_ganancia_m";
+            this.txt_ganancia_m.Size = new System.Drawing.Size(16, 18);
+            this.txt_ganancia_m.TabIndex = 0;
+            this.txt_ganancia_m.Text = "0";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Controls.Add(this.txt_reponer_c);
+            this.panel11.Location = new System.Drawing.Point(136, 38);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(84, 23);
+            this.panel11.TabIndex = 9;
+            // 
+            // txt_reponer_c
+            // 
+            this.txt_reponer_c.AutoSize = true;
+            this.txt_reponer_c.Location = new System.Drawing.Point(6, 2);
+            this.txt_reponer_c.Name = "txt_reponer_c";
+            this.txt_reponer_c.Size = new System.Drawing.Size(16, 18);
+            this.txt_reponer_c.TabIndex = 0;
+            this.txt_reponer_c.Text = "0";
+            // 
             // Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -459,6 +520,7 @@ namespace Todo_en_uno.Forms
             this.Name = "Reporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteDiario";
+            this.Load += new System.EventHandler(this.Reporte_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -467,6 +529,20 @@ namespace Todo_en_uno.Forms
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -480,21 +556,14 @@ namespace Todo_en_uno.Forms
         private System.Windows.Forms.Label cigarrillo_pago_n;
         private System.Windows.Forms.Label mercaderia_pago_n;
         private System.Windows.Forms.Label cigarrillo_reponer;
-        private System.Windows.Forms.TextBox txt_venta_m;
-        private System.Windows.Forms.TextBox txt_venta_c;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_pago_m;
-        private System.Windows.Forms.TextBox txt_pago_c;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_reponer_c;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txt_ganancia_c;
-        private System.Windows.Forms.TextBox txt_ganancia_m;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label cigarrillo_ganancia;
         private System.Windows.Forms.Label label3;
@@ -504,5 +573,19 @@ namespace Todo_en_uno.Forms
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label txt_venta_c;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label txt_venta_m;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label txt_ganancia_m;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label txt_ganancia_c;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label txt_pago_m;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label txt_pago_c;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label txt_reponer_c;
     }
 }
