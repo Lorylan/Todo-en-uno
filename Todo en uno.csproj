@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>E:\TodoEnUno\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -22,9 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -63,6 +63,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TODOenUNO.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LiteDB, Version=5.0.9.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
       <HintPath>packages\LiteDB.5.0.9\lib\net45\LiteDB.dll</HintPath>
@@ -97,6 +100,12 @@
     </Compile>
     <Compile Include="Forms\Borrado.Designer.cs">
       <DependentUpon>Borrado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EliminarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EliminarVenta.Designer.cs">
+      <DependentUpon>EliminarVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormConfiguracion.cs">
       <SubType>Form</SubType>
@@ -156,6 +165,9 @@
     <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\Borrado.resx">
       <DependentUpon>Borrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EliminarVenta.resx">
+      <DependentUpon>EliminarVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormConfiguracion.resx">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>
@@ -227,6 +239,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODOenUNO.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

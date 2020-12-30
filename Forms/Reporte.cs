@@ -30,7 +30,7 @@ namespace Todo_en_uno.Forms
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            if (txt_desde.Value > txt_hasta.Value)
+            if (txt_desde.Value.Date > txt_hasta.Value.Date)
             {
                 MessageBox.Show("La fecha 'Desde' debe ser menor que la fecha'Hasta'");
             }

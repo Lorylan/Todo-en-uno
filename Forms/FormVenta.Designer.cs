@@ -54,6 +54,7 @@
             this.txt_vuelto = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnEliminarVenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datos_venta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Ink Free", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.Titulo.Location = new System.Drawing.Point(207, 9);
+            this.Titulo.Location = new System.Drawing.Point(220, 9);
             this.Titulo.Name = "Titulo";
             this.Titulo.Size = new System.Drawing.Size(204, 39);
             this.Titulo.TabIndex = 21;
@@ -212,9 +213,9 @@
             this.btn_nueva_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nueva_venta.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nueva_venta.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_nueva_venta.Location = new System.Drawing.Point(130, 601);
+            this.btn_nueva_venta.Location = new System.Drawing.Point(22, 601);
             this.btn_nueva_venta.Name = "btn_nueva_venta";
-            this.btn_nueva_venta.Size = new System.Drawing.Size(363, 40);
+            this.btn_nueva_venta.Size = new System.Drawing.Size(310, 40);
             this.btn_nueva_venta.TabIndex = 7;
             this.btn_nueva_venta.Text = "Fin de venta";
             this.btn_nueva_venta.UseVisualStyleBackColor = false;
@@ -297,12 +298,28 @@
             this.label7.TabIndex = 25;
             this.label7.Text = "Pago cliente:";
             // 
+            // btnEliminarVenta
+            // 
+            this.btnEliminarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btnEliminarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEliminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarVenta.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarVenta.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEliminarVenta.Location = new System.Drawing.Point(367, 601);
+            this.btnEliminarVenta.Name = "btnEliminarVenta";
+            this.btnEliminarVenta.Size = new System.Drawing.Size(239, 40);
+            this.btnEliminarVenta.TabIndex = 26;
+            this.btnEliminarVenta.Text = "Eliminar una venta";
+            this.btnEliminarVenta.UseVisualStyleBackColor = false;
+            this.btnEliminarVenta.Click += new System.EventHandler(this.btnEliminarVenta_Click);
+            // 
             // FormVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(642, 653);
+            this.Controls.Add(this.btnEliminarVenta);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_vuelto);
             this.Controls.Add(this.label6);
@@ -356,5 +373,6 @@
         private System.Windows.Forms.Label txt_vuelto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnEliminarVenta;
     }
 }

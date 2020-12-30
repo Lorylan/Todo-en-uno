@@ -235,5 +235,11 @@ namespace Todo_en_uno.Forms
                 txt_vuelto.Text = "$";
             }
         }
+
+        private void btnEliminarVenta_Click(object sender, EventArgs e)
+        {
+            new EliminarVenta().ShowDialog();
+            
+        }
     }
 }

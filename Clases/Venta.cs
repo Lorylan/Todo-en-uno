@@ -11,12 +11,20 @@ namespace Todo_en_uno.Clases
 {
     class Venta
     {
+        public int Id { get; set; }
         public double PrecioTotal { get; set; }
         public double PrecioTotalCigarrillo { get; set; }
         public int CantCigarrillos { get; set; }
         public bool esVentaPropia { get; set; }
 
         public DateTime Fecha { get; set; }
+
+        public void eliminarVenta(int id) {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ventas = db.GetCollection<Venta>("ventas").Delete(id);
+            }
+        }
         public List<Venta> getAll()
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
@@ -49,7 +57,7 @@ namespace Todo_en_uno.Clases
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
-                DateTime hoy = DateTime.Now.Date;
+                DateTime hoy = DateTime.Now;
                 var ventas = db.GetCollection<Venta>("ventas");
                 var venta = new Venta
                 {
@@ -90,12 +98,20 @@ namespace Todo_en_uno.Clases
             }
 
         }
+        public List<Venta> getVentaDe(bool esVentaPropia, DateTime fecha)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var ventas = db.GetCollection<Venta>("ventas");
+                return ventas.Find(x => x.esVentaPropia == esVentaPropia && x.Fecha.Date == fecha).ToList();
+            }
+        }
         public Venta getVentas(bool esVentaPropia, DateTime desde, DateTime hasta)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ventas = db.GetCollection<Venta>("ventas");
-                List<Venta> ventasHoy = ventas.Find(x => x.esVentaPropia == esVentaPropia && x.Fecha >= desde && x.Fecha <= hasta).ToList();
+                List<Venta> ventasHoy = ventas.Find(x => x.esVentaPropia == esVentaPropia && x.Fecha.Date >= desde && x.Fecha.Date <= hasta).ToList();
 
                 Venta sumatoriaVenta = new Venta();
                 sumatoriaVenta.CantCigarrillos = 0;
