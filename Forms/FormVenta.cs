@@ -216,5 +216,25 @@ namespace Todo_en_uno.Forms
             btn_eliminar.BackColor = Color.FromArgb(36, 24, 52);
 
         }
+
+        private void txt_pago_cliente_TextChanged(object sender, EventArgs e)
+        {
+            if (!txt_pago_cliente.Text.Equals(""))
+            {
+                try
+                {
+                    double pago_c = Convert.ToDouble(txt_pago_cliente.Text);
+                    double total = Convert.ToDouble(txt_total.Text.Replace("$", ""));
+                    txt_vuelto.Text = "$" + (pago_c - total);
+                }
+                catch {
+                    MessageBox.Show("Ingrese un número válido para el pago de cliente");
+                    txt_pago_cliente.Text = "";
+                }
+            }
+            else {
+                txt_vuelto.Text = "$";
+            }
+        }
     }
 }
