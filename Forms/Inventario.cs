@@ -45,6 +45,7 @@ namespace Todo_en_uno.Forms
             agregarProd.ShowDialog();
 
             Refrescar();
+            BtnFiltrar_Click(sender, e);
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
@@ -56,6 +57,7 @@ namespace Todo_en_uno.Forms
                 agregarProd.ShowDialog();
             }
             Refrescar();
+            BtnFiltrar_Click(sender, e);
         }
 
         private int? TomarId()
@@ -83,6 +85,7 @@ namespace Todo_en_uno.Forms
                 }
             }
             Refrescar();
+            BtnFiltrar_Click(sender, e);
         }
 
         private void Filtrar(object sender, EventArgs e)

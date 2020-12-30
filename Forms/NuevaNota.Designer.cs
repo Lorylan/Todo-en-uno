@@ -43,7 +43,7 @@ namespace Todo_en_uno.Forms
             this.TxtNota.Location = new System.Drawing.Point(13, 150);
             this.TxtNota.Name = "TxtNota";
             this.TxtNota.Size = new System.Drawing.Size(262, 233);
-            this.TxtNota.TabIndex = 0;
+            this.TxtNota.TabIndex = 2;
             this.TxtNota.Text = "";
             // 
             // TxtNombre
@@ -85,7 +85,7 @@ namespace Todo_en_uno.Forms
             this.btn_guardar.Location = new System.Drawing.Point(68, 402);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(161, 35);
-            this.btn_guardar.TabIndex = 4;
+            this.btn_guardar.TabIndex = 3;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);

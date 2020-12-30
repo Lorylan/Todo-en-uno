@@ -148,7 +148,7 @@ namespace Todo_en_uno.Forms
             this.txt_credito.Location = new System.Drawing.Point(186, 171);
             this.txt_credito.Name = "txt_credito";
             this.txt_credito.Size = new System.Drawing.Size(114, 30);
-            this.txt_credito.TabIndex = 22;
+            this.txt_credito.TabIndex = 4;
             // 
             // txt_debito
             // 
@@ -156,7 +156,7 @@ namespace Todo_en_uno.Forms
             this.txt_debito.Location = new System.Drawing.Point(186, 130);
             this.txt_debito.Name = "txt_debito";
             this.txt_debito.Size = new System.Drawing.Size(114, 30);
-            this.txt_debito.TabIndex = 21;
+            this.txt_debito.TabIndex = 3;
             // 
             // txt_cigarrillo
             // 
@@ -164,7 +164,7 @@ namespace Todo_en_uno.Forms
             this.txt_cigarrillo.Location = new System.Drawing.Point(186, 86);
             this.txt_cigarrillo.Name = "txt_cigarrillo";
             this.txt_cigarrillo.Size = new System.Drawing.Size(114, 30);
-            this.txt_cigarrillo.TabIndex = 20;
+            this.txt_cigarrillo.TabIndex = 2;
             // 
             // txt_mercaderia
             // 
@@ -172,7 +172,7 @@ namespace Todo_en_uno.Forms
             this.txt_mercaderia.Location = new System.Drawing.Point(186, 43);
             this.txt_mercaderia.Name = "txt_mercaderia";
             this.txt_mercaderia.Size = new System.Drawing.Size(114, 30);
-            this.txt_mercaderia.TabIndex = 19;
+            this.txt_mercaderia.TabIndex = 1;
             // 
             // credito
             // 

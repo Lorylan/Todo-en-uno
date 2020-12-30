@@ -80,7 +80,7 @@ namespace Todo_en_uno.Forms
             this.btn_mod.Location = new System.Drawing.Point(339, 103);
             this.btn_mod.Name = "btn_mod";
             this.btn_mod.Size = new System.Drawing.Size(141, 34);
-            this.btn_mod.TabIndex = 6;
+            this.btn_mod.TabIndex = 2;
             this.btn_mod.Text = "Modificar";
             this.btn_mod.UseVisualStyleBackColor = false;
             this.btn_mod.Click += new System.EventHandler(this.btn_mod_Click);
@@ -91,7 +91,7 @@ namespace Todo_en_uno.Forms
             this.TxtCant.Location = new System.Drawing.Point(244, 108);
             this.TxtCant.Name = "TxtCant";
             this.TxtCant.Size = new System.Drawing.Size(77, 30);
-            this.TxtCant.TabIndex = 5;
+            this.TxtCant.TabIndex = 1;
             // 
             // label3
             // 
@@ -173,7 +173,7 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(629, 378);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.TabIndex = 3;
             this.dataGridView1.TabStop = false;
             // 
             // Simulacro

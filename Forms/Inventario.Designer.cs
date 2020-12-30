@@ -29,8 +29,8 @@ namespace Todo_en_uno.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.Titulo = new System.Windows.Forms.Label();
             this.BtnEditar = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@ namespace Todo_en_uno.Forms
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Size = new System.Drawing.Size(807, 434);
-            this.splitContainer1.SplitterDistance = 130;
+            this.splitContainer1.SplitterDistance = 123;
             this.splitContainer1.TabIndex = 0;
             // 
             // Titulo
@@ -116,7 +116,7 @@ namespace Todo_en_uno.Forms
             this.BtnFiltrar.Location = new System.Drawing.Point(682, 46);
             this.BtnFiltrar.Name = "BtnFiltrar";
             this.BtnFiltrar.Size = new System.Drawing.Size(94, 40);
-            this.BtnFiltrar.TabIndex = 5;
+            this.BtnFiltrar.TabIndex = 6;
             this.BtnFiltrar.Text = "Limpiar Filtros";
             this.BtnFiltrar.UseVisualStyleBackColor = false;
             this.BtnFiltrar.Click += new System.EventHandler(this.BtnFiltrar_Click);
@@ -143,7 +143,7 @@ namespace Todo_en_uno.Forms
             this.TxtCodigo.Location = new System.Drawing.Point(403, 54);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(114, 30);
-            this.TxtCodigo.TabIndex = 1;
+            this.TxtCodigo.TabIndex = 3;
             this.TxtCodigo.TextChanged += new System.EventHandler(this.Filtrar);
             // 
             // CheckStock
@@ -154,7 +154,7 @@ namespace Todo_en_uno.Forms
             this.CheckStock.Location = new System.Drawing.Point(460, 87);
             this.CheckStock.Name = "CheckStock";
             this.CheckStock.Size = new System.Drawing.Size(121, 27);
-            this.CheckStock.TabIndex = 2;
+            this.CheckStock.TabIndex = 5;
             this.CheckStock.Text = "Poco Stock";
             this.CheckStock.UseVisualStyleBackColor = true;
             this.CheckStock.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Filtrar);
@@ -203,7 +203,7 @@ namespace Todo_en_uno.Forms
             this.TxtNombre.Location = new System.Drawing.Point(523, 54);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(124, 30);
-            this.TxtNombre.TabIndex = 0;
+            this.TxtNombre.TabIndex = 4;
             this.TxtNombre.TextChanged += new System.EventHandler(this.Filtrar);
             // 
             // dataGridView1
@@ -214,30 +214,30 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MV Boli", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MV Boli", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(807, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(807, 307);
             this.dataGridView1.TabIndex = 1;
             // 
             // Inventario

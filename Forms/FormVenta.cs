@@ -160,7 +160,6 @@ namespace Todo_en_uno.Forms
                 orden = new Orden();
                 venta = new Venta();
                 int cant = venta.getAll().Count;
-                MessageBox.Show("Su venta fue creada con exito");
             }
             else {
                 MessageBox.Show("La venta no posee ningun producto");

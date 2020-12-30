@@ -57,7 +57,7 @@ namespace Todo_en_uno.Forms
             this.btn_ok.Location = new System.Drawing.Point(41, 101);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(106, 41);
-            this.btn_ok.TabIndex = 3;
+            this.btn_ok.TabIndex = 1;
             this.btn_ok.Text = "Borrar";
             this.btn_ok.UseVisualStyleBackColor = false;
             // 
@@ -74,7 +74,7 @@ namespace Todo_en_uno.Forms
             this.btn_cancelar.Location = new System.Drawing.Point(186, 101);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(106, 41);
-            this.btn_cancelar.TabIndex = 4;
+            this.btn_cancelar.TabIndex = 2;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             // 

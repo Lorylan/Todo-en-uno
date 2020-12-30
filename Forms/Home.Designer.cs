@@ -34,6 +34,7 @@ namespace Todo_en_uno
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_sim = new System.Windows.Forms.Button();
             this.btn_ganancias = new System.Windows.Forms.Button();
             this.btn_notas = new System.Windows.Forms.Button();
             this.btn_inv = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@ namespace Todo_en_uno
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelVentas = new System.Windows.Forms.Label();
-            this.btn_sim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -119,6 +119,23 @@ namespace Todo_en_uno
             this.panel3.Size = new System.Drawing.Size(338, 183);
             this.panel3.TabIndex = 8;
             // 
+            // btn_sim
+            // 
+            this.btn_sim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btn_sim.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btn_sim.FlatAppearance.BorderSize = 0;
+            this.btn_sim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_sim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sim.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.btn_sim.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_sim.Location = new System.Drawing.Point(24, 143);
+            this.btn_sim.Name = "btn_sim";
+            this.btn_sim.Size = new System.Drawing.Size(294, 40);
+            this.btn_sim.TabIndex = 8;
+            this.btn_sim.Text = "Simulacro";
+            this.btn_sim.UseVisualStyleBackColor = false;
+            this.btn_sim.Click += new System.EventHandler(this.btn_sim_Click);
+            // 
             // btn_ganancias
             // 
             this.btn_ganancias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
@@ -131,7 +148,7 @@ namespace Todo_en_uno
             this.btn_ganancias.Location = new System.Drawing.Point(24, 105);
             this.btn_ganancias.Name = "btn_ganancias";
             this.btn_ganancias.Size = new System.Drawing.Size(294, 35);
-            this.btn_ganancias.TabIndex = 3;
+            this.btn_ganancias.TabIndex = 7;
             this.btn_ganancias.Text = "Configurar Ganancias";
             this.btn_ganancias.UseVisualStyleBackColor = false;
             this.btn_ganancias.Click += new System.EventHandler(this.btn_ganancias_Click);
@@ -148,7 +165,7 @@ namespace Todo_en_uno
             this.btn_notas.Location = new System.Drawing.Point(24, 67);
             this.btn_notas.Name = "btn_notas";
             this.btn_notas.Size = new System.Drawing.Size(294, 35);
-            this.btn_notas.TabIndex = 2;
+            this.btn_notas.TabIndex = 6;
             this.btn_notas.Text = "Notas/Fiado";
             this.btn_notas.UseVisualStyleBackColor = false;
             this.btn_notas.Click += new System.EventHandler(this.btn_notas_Click);
@@ -165,7 +182,7 @@ namespace Todo_en_uno
             this.btn_inv.Location = new System.Drawing.Point(24, 29);
             this.btn_inv.Name = "btn_inv";
             this.btn_inv.Size = new System.Drawing.Size(294, 35);
-            this.btn_inv.TabIndex = 0;
+            this.btn_inv.TabIndex = 5;
             this.btn_inv.Text = "Inventario";
             this.btn_inv.UseVisualStyleBackColor = false;
             this.btn_inv.Click += new System.EventHandler(this.btn_inv_Click);
@@ -230,7 +247,7 @@ namespace Todo_en_uno
             this.btn_reporte_mensual.Location = new System.Drawing.Point(24, 74);
             this.btn_reporte_mensual.Name = "btn_reporte_mensual";
             this.btn_reporte_mensual.Size = new System.Drawing.Size(294, 40);
-            this.btn_reporte_mensual.TabIndex = 2;
+            this.btn_reporte_mensual.TabIndex = 4;
             this.btn_reporte_mensual.Text = "Reporte Mensual";
             this.btn_reporte_mensual.UseVisualStyleBackColor = false;
             this.btn_reporte_mensual.Click += new System.EventHandler(this.btn_reporte_mensual_Click);
@@ -247,7 +264,7 @@ namespace Todo_en_uno
             this.btn_reporte_diario.Location = new System.Drawing.Point(24, 29);
             this.btn_reporte_diario.Name = "btn_reporte_diario";
             this.btn_reporte_diario.Size = new System.Drawing.Size(294, 42);
-            this.btn_reporte_diario.TabIndex = 1;
+            this.btn_reporte_diario.TabIndex = 3;
             this.btn_reporte_diario.Text = "Reporte Diario";
             this.btn_reporte_diario.UseVisualStyleBackColor = false;
             this.btn_reporte_diario.Click += new System.EventHandler(this.btn_reporte_diario_Click);
@@ -368,23 +385,6 @@ namespace Todo_en_uno
             this.labelVentas.TabIndex = 5;
             this.labelVentas.Text = "Ventas";
             this.labelVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btn_sim
-            // 
-            this.btn_sim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.btn_sim.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btn_sim.FlatAppearance.BorderSize = 0;
-            this.btn_sim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_sim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sim.Font = new System.Drawing.Font("Ink Free", 14.25F);
-            this.btn_sim.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_sim.Location = new System.Drawing.Point(24, 143);
-            this.btn_sim.Name = "btn_sim";
-            this.btn_sim.Size = new System.Drawing.Size(294, 40);
-            this.btn_sim.TabIndex = 11;
-            this.btn_sim.Text = "Simulacro";
-            this.btn_sim.UseVisualStyleBackColor = false;
-            this.btn_sim.Click += new System.EventHandler(this.btn_sim_Click);
             // 
             // Home
             // 

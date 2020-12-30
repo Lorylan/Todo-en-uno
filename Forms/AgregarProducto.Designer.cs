@@ -98,7 +98,7 @@ namespace Todo_en_uno.Forms
             this.CheckCigarrillo.Location = new System.Drawing.Point(149, 375);
             this.CheckCigarrillo.Name = "CheckCigarrillo";
             this.CheckCigarrillo.Size = new System.Drawing.Size(134, 29);
-            this.CheckCigarrillo.TabIndex = 4;
+            this.CheckCigarrillo.TabIndex = 7;
             this.CheckCigarrillo.Text = "Es Cigarrillo";
             this.CheckCigarrillo.UseVisualStyleBackColor = true;
             // 
@@ -128,7 +128,7 @@ namespace Todo_en_uno.Forms
             this.TxtNombre.Location = new System.Drawing.Point(83, 114);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(241, 30);
-            this.TxtNombre.TabIndex = 7;
+            this.TxtNombre.TabIndex = 1;
             // 
             // TxtPCaja
             // 
@@ -136,7 +136,7 @@ namespace Todo_en_uno.Forms
             this.TxtPCaja.Location = new System.Drawing.Point(83, 246);
             this.TxtPCaja.Name = "TxtPCaja";
             this.TxtPCaja.Size = new System.Drawing.Size(108, 30);
-            this.TxtPCaja.TabIndex = 8;
+            this.TxtPCaja.TabIndex = 3;
             this.TxtPCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtPCaja.TextChanged += new System.EventHandler(this.TxtPCaja_TextChanged);
             // 
@@ -146,7 +146,7 @@ namespace Todo_en_uno.Forms
             this.TxtUnidades.Location = new System.Drawing.Point(229, 243);
             this.TxtUnidades.Name = "TxtUnidades";
             this.TxtUnidades.Size = new System.Drawing.Size(108, 30);
-            this.TxtUnidades.TabIndex = 9;
+            this.TxtUnidades.TabIndex = 4;
             this.TxtUnidades.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtUnidades.TextChanged += new System.EventHandler(this.TxtPCaja_TextChanged);
             // 
@@ -156,7 +156,7 @@ namespace Todo_en_uno.Forms
             this.TxtPVenta.Location = new System.Drawing.Point(150, 444);
             this.TxtPVenta.Name = "TxtPVenta";
             this.TxtPVenta.Size = new System.Drawing.Size(133, 30);
-            this.TxtPVenta.TabIndex = 10;
+            this.TxtPVenta.TabIndex = 8;
             this.TxtPVenta.Text = "0";
             this.TxtPVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -180,7 +180,7 @@ namespace Todo_en_uno.Forms
             this.button1.Location = new System.Drawing.Point(110, 488);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(202, 40);
-            this.button1.TabIndex = 13;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Agregar Producto";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -211,7 +211,7 @@ namespace Todo_en_uno.Forms
             this.TxtStock.Location = new System.Drawing.Point(100, 341);
             this.TxtStock.Name = "TxtStock";
             this.TxtStock.Size = new System.Drawing.Size(71, 30);
-            this.TxtStock.TabIndex = 16;
+            this.TxtStock.TabIndex = 5;
             this.TxtStock.Text = "0";
             this.TxtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -221,7 +221,7 @@ namespace Todo_en_uno.Forms
             this.TxtStockMin.Location = new System.Drawing.Point(258, 341);
             this.TxtStockMin.Name = "TxtStockMin";
             this.TxtStockMin.Size = new System.Drawing.Size(66, 30);
-            this.TxtStockMin.TabIndex = 17;
+            this.TxtStockMin.TabIndex = 6;
             this.TxtStockMin.Text = "0";
             this.TxtStockMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -241,7 +241,7 @@ namespace Todo_en_uno.Forms
             this.TxtCodigo.Location = new System.Drawing.Point(83, 176);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(241, 30);
-            this.TxtCodigo.TabIndex = 19;
+            this.TxtCodigo.TabIndex = 2;
             // 
             // label6
             // 
