@@ -49,13 +49,14 @@ namespace Todo_en_uno.Clases
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
+                DateTime hoy = DateTime.Now.Date;
                 var ventas = db.GetCollection<Venta>("ventas");
                 var venta = new Venta
                 {
                     PrecioTotal = this.PrecioTotal,
                     PrecioTotalCigarrillo = this.PrecioTotalCigarrillo ,
                     CantCigarrillos = this.CantCigarrillos,
-                    Fecha = DateTime.Now,
+                    Fecha = hoy,
                     esVentaPropia = esVentaPropia
                 };
                 ventas.Insert(venta);
@@ -89,32 +90,12 @@ namespace Todo_en_uno.Clases
             }
 
         }
-        public Venta getVentasHoy(bool esVentaPropia)
+        public Venta getVentas(bool esVentaPropia, DateTime desde, DateTime hasta)
         {
             using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
             {
                 var ventas = db.GetCollection<Venta>("ventas");
-                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date == DateTime.Now.Date && x.esVentaPropia == esVentaPropia).ToList();
-
-                Venta sumatoriaVenta = new Venta();
-                sumatoriaVenta.CantCigarrillos = 0;
-                sumatoriaVenta.PrecioTotal = 0;
-                sumatoriaVenta.PrecioTotalCigarrillo = 0;
-                foreach (Venta v in ventasHoy)
-                {
-                    sumatoriaVenta.CantCigarrillos += v.CantCigarrillos;
-                    sumatoriaVenta.PrecioTotal += v.PrecioTotal;
-                    sumatoriaVenta.PrecioTotalCigarrillo += v.PrecioTotalCigarrillo;
-                }
-                return sumatoriaVenta;
-            }
-        }
-        public Venta getVentasMes(bool esVentaPropia)
-        {
-            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
-            {
-                var ventas = db.GetCollection<Venta>("ventas");
-                List<Venta> ventasHoy = ventas.Find(x => x.Fecha.Date.Month == DateTime.Now.Date.Month && x.esVentaPropia== esVentaPropia && x.Fecha.Date.Year == DateTime.Now.Date.Year).ToList();
+                List<Venta> ventasHoy = ventas.Find(x => x.esVentaPropia == esVentaPropia && x.Fecha >= desde && x.Fecha <= hasta).ToList();
 
                 Venta sumatoriaVenta = new Venta();
                 sumatoriaVenta.CantCigarrillos = 0;

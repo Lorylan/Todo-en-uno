@@ -16,38 +16,38 @@ namespace Todo_en_uno.Forms
     public partial class Reporte : Form
     {
         Venta venta;
-        public Reporte(bool deHoy)
+
+        public Reporte()
         {
             InitializeComponent();
             venta = new Venta();
-            Venta sumatoriaVentaPropia;
-            Venta sumatoriaVenta;
-            if (deHoy)
-            {
-                sumatoriaVentaPropia = venta.getVentasHoy(true);
-                sumatoriaVenta = venta.getVentasHoy(false);
-                this.Text = "Reporte Diario";
-            }
-            else {
-                label1.Text = "Reporte Mensual";
-                this.Text = "Reporte Mensual";
-                sumatoriaVentaPropia = venta.getVentasMes(true);
-                sumatoriaVenta = venta.getVentasMes(false);
-            }
-            txt_venta_c.Text= sumatoriaVenta.PrecioTotalCigarrillo.ToString();
-            txt_venta_m.Text = sumatoriaVenta.PrecioTotal.ToString();
-            txt_ganancia_c.Text = sumatoriaVenta.calcularGananciaCigarrillo().ToString();
-            txt_ganancia_m.Text= sumatoriaVenta.calcularGananciaMercaderia().ToString();
-            txt_pago_m.Text = sumatoriaVentaPropia.PrecioTotal.ToString();
-            txt_pago_c.Text = sumatoriaVentaPropia.PrecioTotalCigarrillo.ToString();
-            txt_reponer_c.Text = (Convert.ToDouble(txt_venta_c.Text) - Convert.ToDouble(txt_ganancia_c.Text)).ToString();
             
+            this.Text = "Reporte";
 
         }
 
-        private void Reporte_Load(object sender, EventArgs e)
-        {
+        
 
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            if (txt_desde.Value > txt_hasta.Value)
+            {
+                MessageBox.Show("La fecha 'Desde' debe ser menor que la fecha'Hasta'");
+            }
+            else {
+                Venta sumatoriaVentaPropia;
+                Venta sumatoriaVenta;
+                sumatoriaVentaPropia = venta.getVentas(true, txt_desde.Value.Date, txt_hasta.Value.Date);
+                sumatoriaVenta = venta.getVentas(false, txt_desde.Value.Date, txt_hasta.Value.Date);
+                txt_venta_c.Text = sumatoriaVenta.PrecioTotalCigarrillo.ToString();
+                txt_venta_m.Text = sumatoriaVenta.PrecioTotal.ToString();
+                txt_ganancia_c.Text = sumatoriaVenta.calcularGananciaCigarrillo().ToString();
+                txt_ganancia_m.Text = sumatoriaVenta.calcularGananciaMercaderia().ToString();
+                txt_pago_m.Text = sumatoriaVentaPropia.PrecioTotal.ToString();
+                txt_pago_c.Text = sumatoriaVentaPropia.PrecioTotalCigarrillo.ToString();
+                txt_reponer_c.Text = (Convert.ToDouble(txt_venta_c.Text) - Convert.ToDouble(txt_ganancia_c.Text)).ToString();
+            }
+            
         }
     }
 }

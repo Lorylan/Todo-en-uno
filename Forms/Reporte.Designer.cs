@@ -66,6 +66,11 @@ namespace Todo_en_uno.Forms
             this.panel11 = new System.Windows.Forms.Panel();
             this.txt_reponer_c = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.txt_desde = new System.Windows.Forms.DateTimePicker();
+            this.txt_hasta = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -224,7 +229,7 @@ namespace Todo_en_uno.Forms
             this.panel1.Controls.Add(this.cigarrillo_venta);
             this.panel1.Controls.Add(this.label4);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(13, 82);
+            this.panel1.Location = new System.Drawing.Point(22, 168);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 99);
             this.panel1.TabIndex = 4;
@@ -290,7 +295,7 @@ namespace Todo_en_uno.Forms
             this.panel2.Controls.Add(this.mercaderia_ganancia);
             this.panel2.Controls.Add(this.label2);
             this.panel2.ForeColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(264, 83);
+            this.panel2.Location = new System.Drawing.Point(273, 169);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 99);
             this.panel2.TabIndex = 3;
@@ -404,7 +409,7 @@ namespace Todo_en_uno.Forms
             this.panel3.Controls.Add(this.mercaderia_pago_n);
             this.panel3.Controls.Add(this.label6);
             this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(13, 196);
+            this.panel3.Location = new System.Drawing.Point(22, 282);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 99);
             this.panel3.TabIndex = 2;
@@ -467,7 +472,7 @@ namespace Todo_en_uno.Forms
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.cigarrillo_reponer);
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(263, 197);
+            this.panel4.Location = new System.Drawing.Point(272, 283);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(236, 72);
             this.panel4.TabIndex = 1;
@@ -503,12 +508,71 @@ namespace Todo_en_uno.Forms
             this.label12.Text = "Reponer";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txt_desde
+            // 
+            this.txt_desde.Location = new System.Drawing.Point(118, 83);
+            this.txt_desde.Name = "txt_desde";
+            this.txt_desde.Size = new System.Drawing.Size(200, 24);
+            this.txt_desde.TabIndex = 5;
+            // 
+            // txt_hasta
+            // 
+            this.txt_hasta.Location = new System.Drawing.Point(118, 115);
+            this.txt_hasta.Name = "txt_hasta";
+            this.txt_hasta.Size = new System.Drawing.Size(200, 24);
+            this.txt_hasta.TabIndex = 6;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.label13.Location = new System.Drawing.Point(36, 86);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 23);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Desde:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.label14.Location = new System.Drawing.Point(36, 116);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 23);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Hasta:";
+            // 
+            // btnGenerar
+            // 
+            this.btnGenerar.AutoEllipsis = true;
+            this.btnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btnGenerar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerar.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btnGenerar.Location = new System.Drawing.Point(341, 83);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(153, 65);
+            this.btnGenerar.TabIndex = 15;
+            this.btnGenerar.Text = "Generar reporte";
+            this.btnGenerar.UseVisualStyleBackColor = false;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
             // Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(519, 308);
+            this.ClientSize = new System.Drawing.Size(526, 412);
+            this.Controls.Add(this.btnGenerar);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txt_hasta);
+            this.Controls.Add(this.txt_desde);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -520,7 +584,6 @@ namespace Todo_en_uno.Forms
             this.Name = "Reporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteDiario";
-            this.Load += new System.EventHandler(this.Reporte_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -587,5 +650,10 @@ namespace Todo_en_uno.Forms
         private System.Windows.Forms.Label txt_pago_c;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label txt_reponer_c;
+        private System.Windows.Forms.DateTimePicker txt_desde;
+        private System.Windows.Forms.DateTimePicker txt_hasta;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }
