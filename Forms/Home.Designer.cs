@@ -34,6 +34,7 @@ namespace Todo_en_uno
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_sim = new System.Windows.Forms.Button();
             this.btn_ganancias = new System.Windows.Forms.Button();
             this.btn_notas = new System.Windows.Forms.Button();
             this.btn_inv = new System.Windows.Forms.Button();
@@ -41,8 +42,7 @@ namespace Todo_en_uno
             this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_reporte_mensual = new System.Windows.Forms.Button();
-            this.btn_reporte_diario = new System.Windows.Forms.Button();
+            this.btn_reporte = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +52,6 @@ namespace Todo_en_uno
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.labelVentas = new System.Windows.Forms.Label();
-            this.btn_sim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -83,7 +82,7 @@ namespace Todo_en_uno
             this.splitContainer2.Panel2.Controls.Add(this.panel3);
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
             this.splitContainer2.Panel2.Controls.Add(this.panel1);
-            this.splitContainer2.Size = new System.Drawing.Size(338, 486);
+            this.splitContainer2.Size = new System.Drawing.Size(338, 444);
             this.splitContainer2.SplitterDistance = 67;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 23;
@@ -114,10 +113,27 @@ namespace Todo_en_uno
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 231);
+            this.panel3.Location = new System.Drawing.Point(0, 189);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(338, 183);
             this.panel3.TabIndex = 8;
+            // 
+            // btn_sim
+            // 
+            this.btn_sim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btn_sim.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btn_sim.FlatAppearance.BorderSize = 0;
+            this.btn_sim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_sim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sim.Font = new System.Drawing.Font("Ink Free", 14.25F);
+            this.btn_sim.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_sim.Location = new System.Drawing.Point(24, 143);
+            this.btn_sim.Name = "btn_sim";
+            this.btn_sim.Size = new System.Drawing.Size(294, 40);
+            this.btn_sim.TabIndex = 11;
+            this.btn_sim.Text = "Simulacro";
+            this.btn_sim.UseVisualStyleBackColor = false;
+            this.btn_sim.Click += new System.EventHandler(this.btn_sim_Click);
             // 
             // btn_ganancias
             // 
@@ -207,50 +223,32 @@ namespace Todo_en_uno
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.panel2.Controls.Add(this.btn_reporte_mensual);
-            this.panel2.Controls.Add(this.btn_reporte_diario);
+            this.panel2.Controls.Add(this.btn_reporte);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 117);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(338, 114);
+            this.panel2.Size = new System.Drawing.Size(338, 72);
             this.panel2.TabIndex = 7;
             // 
-            // btn_reporte_mensual
+            // btn_reporte
             // 
-            this.btn_reporte_mensual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.btn_reporte_mensual.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btn_reporte_mensual.FlatAppearance.BorderSize = 0;
-            this.btn_reporte_mensual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_reporte_mensual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reporte_mensual.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reporte_mensual.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_reporte_mensual.Location = new System.Drawing.Point(24, 74);
-            this.btn_reporte_mensual.Name = "btn_reporte_mensual";
-            this.btn_reporte_mensual.Size = new System.Drawing.Size(294, 40);
-            this.btn_reporte_mensual.TabIndex = 2;
-            this.btn_reporte_mensual.Text = "Reporte Mensual";
-            this.btn_reporte_mensual.UseVisualStyleBackColor = false;
-            this.btn_reporte_mensual.Click += new System.EventHandler(this.btn_reporte_mensual_Click);
-            // 
-            // btn_reporte_diario
-            // 
-            this.btn_reporte_diario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.btn_reporte_diario.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btn_reporte_diario.FlatAppearance.BorderSize = 0;
-            this.btn_reporte_diario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_reporte_diario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reporte_diario.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reporte_diario.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_reporte_diario.Location = new System.Drawing.Point(24, 29);
-            this.btn_reporte_diario.Name = "btn_reporte_diario";
-            this.btn_reporte_diario.Size = new System.Drawing.Size(294, 42);
-            this.btn_reporte_diario.TabIndex = 1;
-            this.btn_reporte_diario.Text = "Reporte Diario";
-            this.btn_reporte_diario.UseVisualStyleBackColor = false;
-            this.btn_reporte_diario.Click += new System.EventHandler(this.btn_reporte_diario_Click);
+            this.btn_reporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btn_reporte.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
+            this.btn_reporte.FlatAppearance.BorderSize = 0;
+            this.btn_reporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reporte.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reporte.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_reporte.Location = new System.Drawing.Point(24, 29);
+            this.btn_reporte.Name = "btn_reporte";
+            this.btn_reporte.Size = new System.Drawing.Size(294, 42);
+            this.btn_reporte.TabIndex = 1;
+            this.btn_reporte.Text = "Reporte";
+            this.btn_reporte.UseVisualStyleBackColor = false;
+            this.btn_reporte.Click += new System.EventHandler(this.btn_reporte_Click);
             // 
             // panel7
             // 
@@ -258,7 +256,7 @@ namespace Todo_en_uno
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 29);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(24, 85);
+            this.panel7.Size = new System.Drawing.Size(24, 43);
             this.panel7.TabIndex = 9;
             // 
             // panel6
@@ -267,7 +265,7 @@ namespace Todo_en_uno
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(318, 29);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(20, 85);
+            this.panel6.Size = new System.Drawing.Size(20, 43);
             this.panel6.TabIndex = 8;
             // 
             // label1
@@ -369,29 +367,12 @@ namespace Todo_en_uno
             this.labelVentas.Text = "Ventas";
             this.labelVentas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btn_sim
-            // 
-            this.btn_sim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.btn_sim.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(226)))), ((int)(((byte)(234)))));
-            this.btn_sim.FlatAppearance.BorderSize = 0;
-            this.btn_sim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_sim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sim.Font = new System.Drawing.Font("Ink Free", 14.25F);
-            this.btn_sim.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_sim.Location = new System.Drawing.Point(24, 143);
-            this.btn_sim.Name = "btn_sim";
-            this.btn_sim.Size = new System.Drawing.Size(294, 40);
-            this.btn_sim.TabIndex = 11;
-            this.btn_sim.Text = "Simulacro";
-            this.btn_sim.UseVisualStyleBackColor = false;
-            this.btn_sim.Click += new System.EventHandler(this.btn_sim_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(338, 486);
+            this.ClientSize = new System.Drawing.Size(338, 444);
             this.Controls.Add(this.splitContainer2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -418,8 +399,7 @@ namespace Todo_en_uno
         private System.Windows.Forms.Button btn_inv;
         private System.Windows.Forms.Button btn_ganancias;
         private System.Windows.Forms.Button btn_notas;
-        private System.Windows.Forms.Button btn_reporte_mensual;
-        private System.Windows.Forms.Button btn_reporte_diario;
+        private System.Windows.Forms.Button btn_reporte;
         private System.Windows.Forms.Label labelVentas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_venta;

@@ -38,18 +38,6 @@ namespace Todo_en_uno
             f.ShowDialog();
         }
 
-        private void btn_reporte_diario_Click(object sender, EventArgs e)
-        {
-            Reporte r = new Reporte(true);
-            r.ShowDialog();
-        }
-
-        private void btn_reporte_mensual_Click(object sender, EventArgs e)
-        {
-            Reporte r = new Reporte(false);
-            r.ShowDialog();
-        }
-
         private void btn_inv_Click(object sender, EventArgs e)
         {
             Inventario i = new Inventario();
@@ -72,6 +60,12 @@ namespace Todo_en_uno
         {
             Simulacro sim = new Simulacro();
             sim.ShowDialog();
+        }
+
+        private void btn_reporte_Click(object sender, EventArgs e)
+        {
+            Reporte r = new Reporte();
+            r.ShowDialog();
         }
     }
 }
