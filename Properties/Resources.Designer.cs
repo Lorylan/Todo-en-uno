@@ -59,25 +59,5 @@ namespace Todo_en_uno.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap aaaa {
-            get {
-                object obj = ResourceManager.GetObject("aaaa", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap photo_2020_12_27_16_36_35 {
-            get {
-                object obj = ResourceManager.GetObject("photo_2020-12-27_16-36-35", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

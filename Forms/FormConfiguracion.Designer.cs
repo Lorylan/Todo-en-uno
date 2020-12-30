@@ -29,6 +29,7 @@ namespace Todo_en_uno.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfiguracion));
             this.label1 = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -144,34 +145,34 @@ namespace Todo_en_uno.Forms
             // 
             // txt_credito
             // 
-            this.txt_credito.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_credito.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_credito.Location = new System.Drawing.Point(186, 171);
             this.txt_credito.Name = "txt_credito";
-            this.txt_credito.Size = new System.Drawing.Size(114, 30);
+            this.txt_credito.Size = new System.Drawing.Size(114, 29);
             this.txt_credito.TabIndex = 4;
             // 
             // txt_debito
             // 
-            this.txt_debito.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_debito.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_debito.Location = new System.Drawing.Point(186, 130);
             this.txt_debito.Name = "txt_debito";
-            this.txt_debito.Size = new System.Drawing.Size(114, 30);
+            this.txt_debito.Size = new System.Drawing.Size(114, 29);
             this.txt_debito.TabIndex = 3;
             // 
             // txt_cigarrillo
             // 
-            this.txt_cigarrillo.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cigarrillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cigarrillo.Location = new System.Drawing.Point(186, 86);
             this.txt_cigarrillo.Name = "txt_cigarrillo";
-            this.txt_cigarrillo.Size = new System.Drawing.Size(114, 30);
+            this.txt_cigarrillo.Size = new System.Drawing.Size(114, 29);
             this.txt_cigarrillo.TabIndex = 2;
             // 
             // txt_mercaderia
             // 
-            this.txt_mercaderia.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mercaderia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mercaderia.Location = new System.Drawing.Point(186, 43);
             this.txt_mercaderia.Name = "txt_mercaderia";
-            this.txt_mercaderia.Size = new System.Drawing.Size(114, 30);
+            this.txt_mercaderia.Size = new System.Drawing.Size(114, 29);
             this.txt_mercaderia.TabIndex = 1;
             // 
             // credito
@@ -243,6 +244,7 @@ namespace Todo_en_uno.Forms
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormConfiguracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuracion";

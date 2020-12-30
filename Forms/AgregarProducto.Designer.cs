@@ -29,6 +29,7 @@ namespace Todo_en_uno.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarProducto));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -124,38 +125,38 @@ namespace Todo_en_uno.Forms
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombre.Location = new System.Drawing.Point(83, 114);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(241, 30);
+            this.TxtNombre.Size = new System.Drawing.Size(241, 29);
             this.TxtNombre.TabIndex = 1;
             // 
             // TxtPCaja
             // 
-            this.TxtPCaja.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPCaja.Location = new System.Drawing.Point(83, 246);
             this.TxtPCaja.Name = "TxtPCaja";
-            this.TxtPCaja.Size = new System.Drawing.Size(108, 30);
+            this.TxtPCaja.Size = new System.Drawing.Size(108, 29);
             this.TxtPCaja.TabIndex = 3;
             this.TxtPCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtPCaja.TextChanged += new System.EventHandler(this.TxtPCaja_TextChanged);
             // 
             // TxtUnidades
             // 
-            this.TxtUnidades.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUnidades.Location = new System.Drawing.Point(229, 243);
             this.TxtUnidades.Name = "TxtUnidades";
-            this.TxtUnidades.Size = new System.Drawing.Size(108, 30);
+            this.TxtUnidades.Size = new System.Drawing.Size(108, 29);
             this.TxtUnidades.TabIndex = 4;
             this.TxtUnidades.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtUnidades.TextChanged += new System.EventHandler(this.TxtPCaja_TextChanged);
             // 
             // TxtPVenta
             // 
-            this.TxtPVenta.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPVenta.Location = new System.Drawing.Point(150, 444);
             this.TxtPVenta.Name = "TxtPVenta";
-            this.TxtPVenta.Size = new System.Drawing.Size(133, 30);
+            this.TxtPVenta.Size = new System.Drawing.Size(133, 29);
             this.TxtPVenta.TabIndex = 8;
             this.TxtPVenta.Text = "0";
             this.TxtPVenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -207,20 +208,20 @@ namespace Todo_en_uno.Forms
             // 
             // TxtStock
             // 
-            this.TxtStock.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStock.Location = new System.Drawing.Point(100, 341);
             this.TxtStock.Name = "TxtStock";
-            this.TxtStock.Size = new System.Drawing.Size(71, 30);
+            this.TxtStock.Size = new System.Drawing.Size(71, 29);
             this.TxtStock.TabIndex = 5;
             this.TxtStock.Text = "0";
             this.TxtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtStockMin
             // 
-            this.TxtStockMin.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStockMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtStockMin.Location = new System.Drawing.Point(258, 341);
             this.TxtStockMin.Name = "TxtStockMin";
-            this.TxtStockMin.Size = new System.Drawing.Size(66, 30);
+            this.TxtStockMin.Size = new System.Drawing.Size(66, 29);
             this.TxtStockMin.TabIndex = 6;
             this.TxtStockMin.Text = "0";
             this.TxtStockMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -237,10 +238,10 @@ namespace Todo_en_uno.Forms
             // 
             // TxtCodigo
             // 
-            this.TxtCodigo.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodigo.Location = new System.Drawing.Point(83, 176);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(241, 30);
+            this.TxtCodigo.Size = new System.Drawing.Size(241, 29);
             this.TxtCodigo.TabIndex = 2;
             // 
             // label6
@@ -281,6 +282,7 @@ namespace Todo_en_uno.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AgregarProducto";
