@@ -20,10 +20,16 @@ namespace Todo_en_uno.Forms
         Orden orden;
         Venta venta;
         bool esVentaPropia;
+        List<Producto> productosFiltro;
+        Producto producto;
         private void vaciarTxtArriba() {
             txt_codigo.Text = "";
             txt_cant.Text = "1";
-            txt_precio.Text = "";
+           txt_precio.Text = "";
+            txt_nombre.Text = "";
+            txt_pago_cliente.Text = "";
+            txt_vuelto.Text = "$";
+
         }
         private void actualizarTablaPrecio() {
             venta.calcularPrecio();
@@ -75,7 +81,8 @@ namespace Todo_en_uno.Forms
             esVentaPropia = ventaPropia;
             orden = new Orden();
             venta = new Venta();
-            
+            productosFiltro = new List<Producto>();
+            producto = new Producto();
             
             if (orden.getAll(esVentaPropia).Count != 0)
             {
@@ -240,6 +247,29 @@ namespace Todo_en_uno.Forms
         {
             new EliminarVenta().ShowDialog();
             
+        }
+        private void txt_nombre_f_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Producto elegido = productosFiltro.Find(x => x.Nombre == txt_nombre_f.SelectedItem.ToString());
+            txt_codigo.Text = elegido.Codigo.ToString();
+        }
+
+        private void txt_nombre_TextChanged(object sender, EventArgs e)
+        {
+            if (!txt_nombre.Text.Trim().Equals(""))
+            {
+                productosFiltro.Clear();
+                txt_nombre_f.Items.Clear();
+                productosFiltro = producto.GetProductosFiltradosNombre(txt_nombre.Text);
+                foreach (Producto aux in productosFiltro)
+                {
+                    txt_nombre_f.Items.Add(aux.Nombre);
+                }
+            }
+            else
+            {
+                txt_nombre_f.Items.Clear();
+            }
         }
     }
 }

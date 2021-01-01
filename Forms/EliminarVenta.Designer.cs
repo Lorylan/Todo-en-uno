@@ -144,6 +144,7 @@ namespace Todo_en_uno.Forms
             this.Controls.Add(this.datos_venta);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EliminarVenta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EliminarVenta";
             ((System.ComponentModel.ISupportInitialize)(this.datos_venta)).EndInit();
             this.ResumeLayout(false);

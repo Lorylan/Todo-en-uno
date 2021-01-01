@@ -55,6 +55,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEliminarVenta = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_nombre_f = new System.Windows.Forms.ListBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datos_venta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +66,7 @@
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Ink Free", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.Titulo.Location = new System.Drawing.Point(220, 9);
+            this.Titulo.Location = new System.Drawing.Point(308, 9);
             this.Titulo.Name = "Titulo";
             this.Titulo.Size = new System.Drawing.Size(204, 39);
             this.Titulo.TabIndex = 21;
@@ -73,9 +76,9 @@
             // 
             this.txt_codigo.BackColor = System.Drawing.Color.AliceBlue;
             this.txt_codigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_codigo.Location = new System.Drawing.Point(71, 98);
+            this.txt_codigo.Location = new System.Drawing.Point(78, 86);
             this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(186, 29);
+            this.txt_codigo.Size = new System.Drawing.Size(179, 29);
             this.txt_codigo.TabIndex = 1;
             this.txt_codigo.TextChanged += new System.EventHandler(this.txt_codigo_TextChanged);
             // 
@@ -83,7 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 70);
+            this.label1.Location = new System.Drawing.Point(85, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 25);
             this.label1.TabIndex = 19;
@@ -93,7 +96,7 @@
             // 
             this.cant.AutoSize = true;
             this.cant.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cant.Location = new System.Drawing.Point(315, 70);
+            this.cant.Location = new System.Drawing.Point(67, 120);
             this.cant.Name = "cant";
             this.cant.Size = new System.Drawing.Size(96, 25);
             this.cant.TabIndex = 17;
@@ -103,7 +106,7 @@
             // 
             this.txt_cant.BackColor = System.Drawing.Color.AliceBlue;
             this.txt_cant.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.txt_cant.Location = new System.Drawing.Point(334, 99);
+            this.txt_cant.Location = new System.Drawing.Point(72, 148);
             this.txt_cant.Name = "txt_cant";
             this.txt_cant.Size = new System.Drawing.Size(58, 29);
             this.txt_cant.TabIndex = 2;
@@ -129,7 +132,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.datos_venta.DefaultCellStyle = dataGridViewCellStyle2;
-            this.datos_venta.Location = new System.Drawing.Point(13, 182);
+            this.datos_venta.Location = new System.Drawing.Point(13, 236);
             this.datos_venta.Name = "datos_venta";
             this.datos_venta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -141,7 +144,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datos_venta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.datos_venta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datos_venta.Size = new System.Drawing.Size(617, 285);
+            this.datos_venta.Size = new System.Drawing.Size(738, 285);
             this.datos_venta.TabIndex = 5;
             this.datos_venta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datos_venta_CellClick);
             this.datos_venta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datos_venta_CellContentClick);
@@ -150,7 +153,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 482);
+            this.label2.Location = new System.Drawing.Point(73, 524);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 25);
             this.label2.TabIndex = 6;
@@ -160,7 +163,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(209, 482);
+            this.label3.Location = new System.Drawing.Point(254, 524);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 25);
             this.label3.TabIndex = 7;
@@ -170,7 +173,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(454, 482);
+            this.label4.Location = new System.Drawing.Point(499, 524);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 25);
             this.label4.TabIndex = 8;
@@ -180,7 +183,7 @@
             // 
             this.txt_total.AutoSize = true;
             this.txt_total.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.Location = new System.Drawing.Point(28, 507);
+            this.txt_total.Location = new System.Drawing.Point(73, 549);
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(24, 25);
             this.txt_total.TabIndex = 9;
@@ -190,7 +193,7 @@
             // 
             this.txt_total_debito.AutoSize = true;
             this.txt_total_debito.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_debito.Location = new System.Drawing.Point(209, 507);
+            this.txt_total_debito.Location = new System.Drawing.Point(254, 549);
             this.txt_total_debito.Name = "txt_total_debito";
             this.txt_total_debito.Size = new System.Drawing.Size(24, 25);
             this.txt_total_debito.TabIndex = 10;
@@ -200,7 +203,7 @@
             // 
             this.txt_total_credito.AutoSize = true;
             this.txt_total_credito.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total_credito.Location = new System.Drawing.Point(454, 507);
+            this.txt_total_credito.Location = new System.Drawing.Point(499, 549);
             this.txt_total_credito.Name = "txt_total_credito";
             this.txt_total_credito.Size = new System.Drawing.Size(24, 25);
             this.txt_total_credito.TabIndex = 11;
@@ -213,7 +216,7 @@
             this.btn_nueva_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nueva_venta.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nueva_venta.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_nueva_venta.Location = new System.Drawing.Point(22, 601);
+            this.btn_nueva_venta.Location = new System.Drawing.Point(62, 639);
             this.btn_nueva_venta.Name = "btn_nueva_venta";
             this.btn_nueva_venta.Size = new System.Drawing.Size(310, 40);
             this.btn_nueva_venta.TabIndex = 7;
@@ -230,7 +233,7 @@
             // 
             this.precio.AutoSize = true;
             this.precio.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.precio.Location = new System.Drawing.Point(485, 71);
+            this.precio.Location = new System.Drawing.Point(191, 120);
             this.precio.Name = "precio";
             this.precio.Size = new System.Drawing.Size(66, 25);
             this.precio.TabIndex = 14;
@@ -240,7 +243,7 @@
             // 
             this.txt_precio.BackColor = System.Drawing.Color.AliceBlue;
             this.txt_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.txt_precio.Location = new System.Drawing.Point(490, 99);
+            this.txt_precio.Location = new System.Drawing.Point(176, 148);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(81, 29);
             this.txt_precio.TabIndex = 3;
@@ -251,7 +254,7 @@
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_eliminar.Location = new System.Drawing.Point(13, 142);
+            this.btn_eliminar.Location = new System.Drawing.Point(14, 196);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(116, 34);
             this.btn_eliminar.TabIndex = 4;
@@ -262,7 +265,7 @@
             // txt_pago_cliente
             // 
             this.txt_pago_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.txt_pago_cliente.Location = new System.Drawing.Point(239, 548);
+            this.txt_pago_cliente.Location = new System.Drawing.Point(284, 590);
             this.txt_pago_cliente.Name = "txt_pago_cliente";
             this.txt_pago_cliente.Size = new System.Drawing.Size(106, 29);
             this.txt_pago_cliente.TabIndex = 6;
@@ -272,7 +275,7 @@
             // 
             this.txt_vuelto.AutoSize = true;
             this.txt_vuelto.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_vuelto.Location = new System.Drawing.Point(431, 552);
+            this.txt_vuelto.Location = new System.Drawing.Point(476, 594);
             this.txt_vuelto.Name = "txt_vuelto";
             this.txt_vuelto.Size = new System.Drawing.Size(24, 25);
             this.txt_vuelto.TabIndex = 24;
@@ -282,7 +285,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(362, 552);
+            this.label6.Location = new System.Drawing.Point(407, 594);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 25);
             this.label6.TabIndex = 23;
@@ -292,7 +295,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(104, 552);
+            this.label7.Location = new System.Drawing.Point(149, 594);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 25);
             this.label7.TabIndex = 25;
@@ -305,7 +308,7 @@
             this.btnEliminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarVenta.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarVenta.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEliminarVenta.Location = new System.Drawing.Point(367, 601);
+            this.btnEliminarVenta.Location = new System.Drawing.Point(412, 639);
             this.btnEliminarVenta.Name = "btnEliminarVenta";
             this.btnEliminarVenta.Size = new System.Drawing.Size(239, 40);
             this.btnEliminarVenta.TabIndex = 26;
@@ -313,12 +316,46 @@
             this.btnEliminarVenta.UseVisualStyleBackColor = false;
             this.btnEliminarVenta.Click += new System.EventHandler(this.btnEliminarVenta_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(284, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 25);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Nombre:";
+            // 
+            // txt_nombre_f
+            // 
+            this.txt_nombre_f.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.txt_nombre_f.FormattingEnabled = true;
+            this.txt_nombre_f.ItemHeight = 24;
+            this.txt_nombre_f.Location = new System.Drawing.Point(289, 121);
+            this.txt_nombre_f.Name = "txt_nombre_f";
+            this.txt_nombre_f.Size = new System.Drawing.Size(448, 52);
+            this.txt_nombre_f.TabIndex = 28;
+            this.txt_nombre_f.SelectedIndexChanged += new System.EventHandler(this.txt_nombre_f_SelectedIndexChanged);
+            // 
+            // txt_nombre
+            // 
+            this.txt_nombre.BackColor = System.Drawing.Color.AliceBlue;
+            this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_nombre.Location = new System.Drawing.Point(378, 86);
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(359, 29);
+            this.txt_nombre.TabIndex = 29;
+            this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
+            // 
             // FormVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(642, 653);
+            this.ClientSize = new System.Drawing.Size(763, 686);
+            this.Controls.Add(this.txt_nombre);
+            this.Controls.Add(this.txt_nombre_f);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnEliminarVenta);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_vuelto);
@@ -374,5 +411,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnEliminarVenta;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox txt_nombre_f;
+        private System.Windows.Forms.TextBox txt_nombre;
     }
 }

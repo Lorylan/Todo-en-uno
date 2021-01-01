@@ -41,6 +41,14 @@ namespace Todo_en_uno.Clases
                 return resul;
             }
         }
+        public List<Producto> GetProductosFiltradosNombre(string nombre)
+        {
+            using (var db = new LiteDatabase(Configuracion.rutaBaseDeDatos))
+            {
+                var productos = db.GetCollection<Producto>("productos");
+                return  productos.Query().Where(x =>  x.Nombre.Contains(nombre)).ToList();
+            }
+        }
 
         public static void DeleteProducto(int id)
         {
