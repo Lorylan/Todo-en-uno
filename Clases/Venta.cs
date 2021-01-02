@@ -152,7 +152,7 @@ namespace Todo_en_uno.Clases
             foreach (Orden orden in ordenes) {
                 if (orden.esCigarrillo)
                 {
-                    CantCigarrillos++;
+                    CantCigarrillos += orden.cantProducto;
                     if (orden.cantProducto != 0)
                     {
                         PrecioTotalCigarrillo += (orden.precio * orden.cantProducto);
