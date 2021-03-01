@@ -28,13 +28,13 @@ namespace Todo_en_uno
 
         private void btn_venta_Click(object sender, EventArgs e)
         {
-            FormVenta f = new FormVenta(false);
+            FormVenta f = new FormVenta(false, "Nueva Venta");
             f.ShowDialog();
         }
 
         private void btn_venta_propia_Click(object sender, EventArgs e)
         {
-            FormVenta f = new FormVenta(true);
+            FormVenta f = new FormVenta(true,"Nueva venta propia");
             f.ShowDialog();
         }
 

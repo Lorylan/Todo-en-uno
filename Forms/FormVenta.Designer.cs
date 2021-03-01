@@ -66,11 +66,13 @@
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Ink Free", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.Titulo.Location = new System.Drawing.Point(308, 9);
+            this.Titulo.Location = new System.Drawing.Point(252, 9);
             this.Titulo.Name = "Titulo";
+            this.Titulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Titulo.Size = new System.Drawing.Size(204, 39);
             this.Titulo.TabIndex = 21;
             this.Titulo.Text = "Nueva venta";
+            this.Titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_codigo
             // 

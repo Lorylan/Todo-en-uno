@@ -75,9 +75,11 @@ namespace Todo_en_uno.Forms
         }
         //.......................................................................//
 
-        public FormVenta(bool ventaPropia)
+        public FormVenta(bool ventaPropia, string texto)
         {
+            
             InitializeComponent();
+            Titulo.Text = texto;
             esVentaPropia = ventaPropia;
             orden = new Orden();
             venta = new Venta();
