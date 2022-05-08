@@ -77,7 +77,7 @@ namespace Todo_en_uno.Forms
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(807, 434);
+            this.splitContainer1.Size = new System.Drawing.Size(1174, 689);
             this.splitContainer1.SplitterDistance = 123;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -110,13 +110,14 @@ namespace Todo_en_uno.Forms
             // 
             // BtnFiltrar
             // 
+            this.BtnFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.BtnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFiltrar.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFiltrar.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.BtnFiltrar.Location = new System.Drawing.Point(682, 46);
+            this.BtnFiltrar.Location = new System.Drawing.Point(1011, 36);
             this.BtnFiltrar.Name = "BtnFiltrar";
-            this.BtnFiltrar.Size = new System.Drawing.Size(94, 40);
+            this.BtnFiltrar.Size = new System.Drawing.Size(135, 40);
             this.BtnFiltrar.TabIndex = 6;
             this.BtnFiltrar.Text = "Limpiar Filtros";
             this.BtnFiltrar.UseVisualStyleBackColor = false;
@@ -140,8 +141,9 @@ namespace Todo_en_uno.Forms
             // 
             // TxtCodigo
             // 
+            this.TxtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCodigo.Location = new System.Drawing.Point(403, 54);
+            this.TxtCodigo.Location = new System.Drawing.Point(617, 40);
             this.TxtCodigo.Name = "TxtCodigo";
             this.TxtCodigo.Size = new System.Drawing.Size(114, 29);
             this.TxtCodigo.TabIndex = 3;
@@ -149,10 +151,11 @@ namespace Todo_en_uno.Forms
             // 
             // CheckStock
             // 
+            this.CheckStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CheckStock.AutoSize = true;
             this.CheckStock.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.CheckStock.Location = new System.Drawing.Point(460, 87);
+            this.CheckStock.Location = new System.Drawing.Point(698, 87);
             this.CheckStock.Name = "CheckStock";
             this.CheckStock.Size = new System.Drawing.Size(121, 27);
             this.CheckStock.TabIndex = 5;
@@ -162,10 +165,11 @@ namespace Todo_en_uno.Forms
             // 
             // CodigoProducto
             // 
+            this.CodigoProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CodigoProducto.AutoSize = true;
             this.CodigoProducto.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CodigoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.CodigoProducto.Location = new System.Drawing.Point(419, 26);
+            this.CodigoProducto.Location = new System.Drawing.Point(537, 43);
             this.CodigoProducto.Name = "CodigoProducto";
             this.CodigoProducto.Size = new System.Drawing.Size(74, 26);
             this.CodigoProducto.TabIndex = 4;
@@ -189,10 +193,11 @@ namespace Todo_en_uno.Forms
             // 
             // NombreProducto
             // 
+            this.NombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NombreProducto.AutoSize = true;
             this.NombreProducto.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
-            this.NombreProducto.Location = new System.Drawing.Point(543, 26);
+            this.NombreProducto.Location = new System.Drawing.Point(757, 43);
             this.NombreProducto.Name = "NombreProducto";
             this.NombreProducto.Size = new System.Drawing.Size(87, 26);
             this.NombreProducto.TabIndex = 3;
@@ -200,8 +205,9 @@ namespace Todo_en_uno.Forms
             // 
             // TxtNombre
             // 
+            this.TxtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(523, 54);
+            this.TxtNombre.Location = new System.Drawing.Point(847, 40);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(124, 29);
             this.TxtNombre.TabIndex = 4;
@@ -238,7 +244,7 @@ namespace Todo_en_uno.Forms
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(807, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(1174, 562);
             this.dataGridView1.TabIndex = 1;
             // 
             // Inventario
@@ -246,11 +252,12 @@ namespace Todo_en_uno.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(807, 434);
+            this.ClientSize = new System.Drawing.Size(1174, 689);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

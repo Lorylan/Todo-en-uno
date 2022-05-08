@@ -58,6 +58,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_nombre_f = new System.Windows.Forms.ListBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.btn_imprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datos_venta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +117,9 @@
             // 
             // datos_venta
             // 
+            this.datos_venta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.datos_venta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -153,6 +157,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(73, 524);
@@ -163,6 +169,8 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(254, 524);
@@ -173,6 +181,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(499, 524);
@@ -183,6 +193,8 @@
             // 
             // txt_total
             // 
+            this.txt_total.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_total.AutoSize = true;
             this.txt_total.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_total.Location = new System.Drawing.Point(73, 549);
@@ -193,6 +205,8 @@
             // 
             // txt_total_debito
             // 
+            this.txt_total_debito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_total_debito.AutoSize = true;
             this.txt_total_debito.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_total_debito.Location = new System.Drawing.Point(254, 549);
@@ -203,6 +217,8 @@
             // 
             // txt_total_credito
             // 
+            this.txt_total_credito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_total_credito.AutoSize = true;
             this.txt_total_credito.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_total_credito.Location = new System.Drawing.Point(499, 549);
@@ -213,14 +229,15 @@
             // 
             // btn_nueva_venta
             // 
+            this.btn_nueva_venta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_nueva_venta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.btn_nueva_venta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_nueva_venta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nueva_venta.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nueva_venta.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btn_nueva_venta.Location = new System.Drawing.Point(62, 639);
+            this.btn_nueva_venta.Location = new System.Drawing.Point(26, 639);
             this.btn_nueva_venta.Name = "btn_nueva_venta";
-            this.btn_nueva_venta.Size = new System.Drawing.Size(310, 40);
+            this.btn_nueva_venta.Size = new System.Drawing.Size(231, 40);
             this.btn_nueva_venta.TabIndex = 7;
             this.btn_nueva_venta.Text = "Fin de venta";
             this.btn_nueva_venta.UseVisualStyleBackColor = false;
@@ -266,6 +283,7 @@
             // 
             // txt_pago_cliente
             // 
+            this.txt_pago_cliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txt_pago_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txt_pago_cliente.Location = new System.Drawing.Point(284, 590);
             this.txt_pago_cliente.Name = "txt_pago_cliente";
@@ -275,6 +293,7 @@
             // 
             // txt_vuelto
             // 
+            this.txt_vuelto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_vuelto.AutoSize = true;
             this.txt_vuelto.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_vuelto.Location = new System.Drawing.Point(476, 594);
@@ -285,6 +304,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(407, 594);
@@ -295,9 +315,10 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(149, 594);
+            this.label7.Location = new System.Drawing.Point(139, 594);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 25);
             this.label7.TabIndex = 25;
@@ -305,12 +326,14 @@
             // 
             // btnEliminarVenta
             // 
+            this.btnEliminarVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
             this.btnEliminarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnEliminarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarVenta.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarVenta.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEliminarVenta.Location = new System.Drawing.Point(412, 639);
+            this.btnEliminarVenta.Location = new System.Drawing.Point(302, 639);
             this.btnEliminarVenta.Name = "btnEliminarVenta";
             this.btnEliminarVenta.Size = new System.Drawing.Size(239, 40);
             this.btnEliminarVenta.TabIndex = 26;
@@ -320,6 +343,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Ink Free", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(284, 86);
@@ -330,6 +354,7 @@
             // 
             // txt_nombre_f
             // 
+            this.txt_nombre_f.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombre_f.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.txt_nombre_f.FormattingEnabled = true;
             this.txt_nombre_f.ItemHeight = 24;
@@ -341,6 +366,7 @@
             // 
             // txt_nombre
             // 
+            this.txt_nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombre.BackColor = System.Drawing.Color.AliceBlue;
             this.txt_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.Location = new System.Drawing.Point(378, 86);
@@ -349,12 +375,29 @@
             this.txt_nombre.TabIndex = 29;
             this.txt_nombre.TextChanged += new System.EventHandler(this.txt_nombre_TextChanged);
             // 
+            // btn_imprimir
+            // 
+            this.btn_imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_imprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(24)))), ((int)(((byte)(52)))));
+            this.btn_imprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_imprimir.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimir.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.btn_imprimir.Location = new System.Drawing.Point(572, 639);
+            this.btn_imprimir.Name = "btn_imprimir";
+            this.btn_imprimir.Size = new System.Drawing.Size(165, 40);
+            this.btn_imprimir.TabIndex = 31;
+            this.btn_imprimir.Text = "Imprimir";
+            this.btn_imprimir.UseVisualStyleBackColor = false;
+            this.btn_imprimir.Click += new System.EventHandler(this.Imprimir_Click);
+            // 
             // FormVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(763, 686);
+            this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.txt_nombre_f);
             this.Controls.Add(this.label5);
@@ -383,6 +426,7 @@
             this.Name = "FormVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.datos_venta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -416,5 +460,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox txt_nombre_f;
         private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.Button btn_imprimir;
     }
 }

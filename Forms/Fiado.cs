@@ -104,5 +104,7 @@ namespace Todo_en_uno.Forms
             int? id = TomarId();
             if(id != null) cargarNota((int)id);
         }
+
+        
     }
 }

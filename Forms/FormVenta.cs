@@ -22,10 +22,13 @@ namespace Todo_en_uno.Forms
         bool esVentaPropia;
         List<Producto> productosFiltro;
         Producto producto;
+
+        public object PrintForm { get; private set; }
+
         private void vaciarTxtArriba() {
             txt_codigo.Text = "";
             txt_cant.Text = "1";
-           txt_precio.Text = "";
+            txt_precio.Text = "";
             txt_nombre.Text = "";
             txt_pago_cliente.Text = "";
             txt_vuelto.Text = "$";
@@ -33,13 +36,10 @@ namespace Todo_en_uno.Forms
         }
         private void actualizarTablaPrecio() {
             venta.calcularPrecio();
-            txt_total.Text = "$" + (venta.PrecioTotal + venta.PrecioTotalCigarrillo).ToString(); ;
+            txt_total.Text = "$" + (venta.PrecioTotal + venta.PrecioTotalCigarrillo).ToString(); 
             txt_total_credito.Text = "$" + venta.calcularCredito(esVentaPropia).ToString();
             txt_total_debito.Text = "$" + venta.calcularDebito(esVentaPropia).ToString();
             datos_venta.DataSource = orden.getAll(esVentaPropia);
-            
-
-
         }
         public void agregarBotones() {
             DataGridViewButtonColumn colMas = new DataGridViewButtonColumn()
@@ -273,5 +273,71 @@ namespace Todo_en_uno.Forms
                 txt_nombre_f.Items.Clear();
             }
         }
+
+        private void Imprimir_Click(object sender, EventArgs e)
+        {
+
+            Factura.CreaTicket Ticket1 = new Factura.CreaTicket();
+            
+
+            Ticket1.TextoCentro("\b TODO en UNO \b"); //imprime una linea de descripcion\
+
+            Ticket1.TextoIzquierda("");
+
+            Ticket1.TextoCentro("57 e/ 14BIS y 15");
+            Ticket1.TextoCentro("Contacto: 2214553966");
+            Ticket1.TextoCentro("Horarios de atencion");
+            Ticket1.TextoCentro("Lunes a Domingo");
+            Ticket1.TextoCentro("9 a 22 HS");
+            Ticket1.TextoCentro("JUEVES CERRADO");
+
+            Ticket1.TextoIzquierda("");
+    
+            Ticket1.TextoIzquierda("Fecha:" + DateTime.Now.ToShortDateString() + " Hora:" + DateTime.Now.ToShortTimeString());
+
+            Ticket1.TextoIzquierda("");
+
+
+            Ticket1.TextoCentro("Ticket");
+            Factura.CreaTicket.LineasGuion();
+            foreach (DataGridViewRow r in datos_venta.Rows)
+            {
+                
+                int cantidad = Convert.ToInt32(r.Cells["cantProducto"].Value.ToString());
+                string nombre = r.Cells[4].Value.ToString();
+                double precio = double.Parse(r.Cells["precio"].Value.ToString());
+                
+                double subtotal = precio * Convert.ToDouble(cantidad);
+
+                Ticket1.TextoIzquierda(nombre);
+                string linea = "" + cantidad + " X $" + precio + "    ";
+                Ticket1.AgregaTotales(linea, subtotal);
+                
+                
+               
+            }
+
+
+            Factura.CreaTicket.LineasGuion();
+            Ticket1.TextoIzquierda(" ");
+            double total = venta.PrecioTotal + venta.PrecioTotalCigarrillo;
+            Ticket1.AgregaTotales("Total", total); // imprime linea con total
+            Ticket1.TextoIzquierda(" ");
+
+            Ticket1.TextoCentro("******************************");
+            Ticket1.TextoCentro("Gracias por elegirnos");
+            Ticket1.TextoCentro("Quique y Moni");
+            Ticket1.TextoCentro("******************************");
+            Ticket1.TextoIzquierda(" ");
+            Ticket1.TextoIzquierda(" ");
+            string impresora = "XP-58 (copy 1)";
+            Ticket1.ImprimirTiket(impresora);
+
+        }
+
+        
+     
+
+        
     }
 }
